@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Java学习笔记一：基本程序结构, 无尽之路">
-    <meta name="description" content="Java语法之一：基本程序结构（1）正文1.1 数据类型 整型整型是有符号的整数，==Java中不含无符号整型==。1.int 4字节                            ( 取值范围约为-20亿到正20亿)2.Long ">
+    <meta name="description" content="Java语法之一：基本程序结构（1）正文1.1 数据类型 整型整型是有符号的整数，Java中不含无符号整型。1.int 4字节                            ( 取值范围约为-20亿到正20亿)2.Long 8字节3">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -471,7 +471,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java语法之一：基本程序结构（1）"><a href="#Java语法之一：基本程序结构（1）" class="headerlink" title="Java语法之一：基本程序结构（1）"></a>Java语法之一：基本程序结构（1）</h1><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-1-数据类型"><a href="#1-1-数据类型" class="headerlink" title="1.1 数据类型 "></a><span id = "1.1">1.1 数据类型 </span></h2><h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><p>整型是有符号的整数，==Java中不含无符号整型==。<br>1.int 4字节                            ( 取值范围约为-20亿到正20亿)<br>2.Long 8字节<br>3.short 2字节<br>4.byte 1字节                            (取值范围为[-128~127])</p>
+                <h1 id="Java语法之一：基本程序结构（1）"><a href="#Java语法之一：基本程序结构（1）" class="headerlink" title="Java语法之一：基本程序结构（1）"></a>Java语法之一：基本程序结构（1）</h1><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-1-数据类型"><a href="#1-1-数据类型" class="headerlink" title="1.1 数据类型 "></a><span id = "1.1">1.1 数据类型 </span></h2><h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><p>整型是有符号的整数，<code>Java中不含无符号整型</code>。<br>1.int 4字节                            ( 取值范围约为-20亿到正20亿)<br>2.Long 8字节<br>3.short 2字节<br>4.byte 1字节                            (取值范围为[-128~127])</p>
 <h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><p>浮点类型表示有符号的小数。<br>1.float 4字节             (取值范围约为±3.402823 e+38)<br>2.double 8字节（取值范围约为±1.79769313486231570 e+308）</p>
 <h3 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h3><p>char 2字节 表示单个字符。也可以用\u加4个16进制数来表示，\u0000~\uffff。</p>
 <h3 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a>boolean类型</h3><p>boolean (布尔）类型有两个值：false 和 true, 用来判定逻辑条件 整型值和布尔值之间<br>不能进行相互转换。<br><a name="1.2">  1.2 </a></p>
@@ -504,7 +504,7 @@ String S <span class="token operator">=</span> greeting<span class="token punctu
 <pre class=" language-java"><code class="language-java">String all <span class="token operator">=</span> String<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">,</span><span class="token string">"S"</span><span class="token punctuation">,</span><span class="token string">"M"</span><span class="token punctuation">,</span><span class="token string">"L"</span><span class="token punctuation">,</span><span class="token string">"XL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//all的值为"S/M/L/XL"</span></code></pre>
 <h3 id="1-5-3-不可变字符串"><a href="#1-5-3-不可变字符串" class="headerlink" title="1.5.3 不可变字符串"></a><span id = "1.5.3">1.5.3 不可变字符串</span></h3><p>字符串不可修改，只能重新赋值。</p>
 <h3 id="1-5-4-判断字符串是否相等"><a href="#1-5-4-判断字符串是否相等" class="headerlink" title="1.5.4 判断字符串是否相等"></a><span id = "1.5.4">1.5.4 判断字符串是否相等</span></h3><p>用String的实例化方法s.equals(t); 返回值是boolean值，相等返回true，不相等返回false。</p>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>1.==不要用“= =”判断字符串是否相等==，Java字符串是一个指针，如果两字符串指向的位置不同，但这两个位置保存的内容一样，还是会判断为不相等。<br>2.判断串是否为“NULL”用“= = ”，串值为“NULL”与空串不等价。<br>空串是一个字符串对象，只是长度为0，可以调用实例函数。<br>串值NULL表示没有任何对象与之关联，不可以调用函数。<br>例：</p>
+<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>1.<code>不要用“= =”判断字符串是否相等</code>，Java字符串是一个指针，如果两字符串指向的位置不同，但这两个位置保存的内容一样，还是会判断为不相等。<br>2.判断串是否为“NULL”用“= = ”，串值为“NULL”与空串不等价。<br>空串是一个字符串对象，只是长度为0，可以调用实例函数。<br>串值NULL表示没有任何对象与之关联，不可以调用函数。<br>例：</p>
 <pre class=" language-java"><code class="language-java">String a <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
 String b <span class="token operator">=</span> NULL<span class="token punctuation">;</span>
 a<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//no error</span>
@@ -778,7 +778,7 @@ b<span class="token punctuation">.</span><span class="token function">length</sp
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语法之一：基本程序结构（1）正文1.1 数据类型 整型整型是有符号的整数，==Java中不含无符号整型==。1.int 4字节                            ( 取值范围约为-20亿到正20亿)2.Long 
+                            Java语法之一：基本程序结构（1）正文1.1 数据类型 整型整型是有符号的整数，Java中不含无符号整型。1.int 4字节                            ( 取值范围约为-20亿到正20亿)2.Long 8字节3
                         
                     </div>
                     <div class="publish-info">

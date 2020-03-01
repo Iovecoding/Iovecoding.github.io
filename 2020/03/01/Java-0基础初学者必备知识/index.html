@@ -473,7 +473,7 @@
                 <p>今天来系统的整理一下Java生态体系的各项基本概念。</p>
 <h2 id="一-Java技术体系"><a href="#一-Java技术体系" class="headerlink" title="一.Java技术体系"></a>一.Java技术体系</h2><p>  用Java写出的代码，要运行在计算机上，进行各种各样的工作，需要以下几个关键部分的支持。</p>
 <h3 id="1-Java程序设计语言"><a href="#1-Java程序设计语言" class="headerlink" title="1.Java程序设计语言"></a>1.Java程序设计语言</h3><p>  没什么可说的，就是Java语言自身。</p>
-<h3 id="2-各种平台上的Java虚拟机（JVM）"><a href="#2-各种平台上的Java虚拟机（JVM）" class="headerlink" title="2.各种平台上的Java虚拟机（JVM）"></a>2.各种平台上的Java虚拟机（JVM）</h3><p>  Java的一个重要特性就是跨平台性。就是java编写的代码在编译后，可以在不同的系统上运行。如windows，linux，unix等等。这个特性是用JVM加以实现的。<br>首先，当编写完Java代码后，需要进行编译，将我们人类能读懂的代码通过第一次编译，转变为.class文件，也就是==字节码文件==。==不管我们写出的程序在什么系统上运行，我们的字节码文件都是同一个==。<br>然后，用JVM来将字节码文件转换成计算机能读懂的二进制语言（机械码）。在这里，==不同系统下的JVM可以被理解为多个入口的形状完全相同，但出口的形状各不相同的流水线==。==不同系统都有自己特定的JVM，这些JVM可以接收同一个字节码文件，将其转化为适用于各自系统的不同的二进制文件（机械码文件）==。这些文件可以被计算机直接执行，所以也叫可执行文件。<br>所以，Java程序可以“==一次编译，到处运行==”（当然前提是这个系统有它对应的JVM）。</p>
+<h3 id="2-各种平台上的Java虚拟机（JVM）"><a href="#2-各种平台上的Java虚拟机（JVM）" class="headerlink" title="2.各种平台上的Java虚拟机（JVM）"></a>2.各种平台上的Java虚拟机（JVM）</h3><p>  Java的一个重要特性就是跨平台性。就是java编写的代码在编译后，可以在不同的系统上运行。如windows，linux，unix等等。这个特性是用JVM加以实现的。<br>首先，当编写完Java代码后，需要进行编译，将我们人类能读懂的代码通过第一次编译，转变为.class文件，也就是<code>字节码文件</code>。<code>不管我们写出的程序在什么系统上运行，我们的字节码文件都是同一个</code>。<br>然后，用JVM来将字节码文件转换成计算机能读懂的二进制语言（机械码）。在这里，<code>不同系统下的JVM可以被理解为多个入口的形状完全相同，但出口的形状各不相同的流水线</code>。<code>不同系统都有自己特定的JVM，这些JVM可以接收同一个字节码文件，将其转化为适用于各自系统的不同的二进制文件（机械码文件）</code>。这些文件可以被计算机直接执行，所以也叫可执行文件。<br>所以，Java程序可以“<code>一次编译，到处运行</code>”（当然前提是这个系统有它对应的JVM）。</p>
 <h3 id="3-Java-API类库"><a href="#3-Java-API类库" class="headerlink" title="3.Java API类库"></a>3.Java API类库</h3><p>  Java里的一些标准库函数。Java里自带了一些已经实现好了的数据结构类，和它们对应的一些函数，来实现相应的功能，如List，ArrayList等等，使用起来很方便，就不需要我们重复造轮子啦。</p>
 <h3 id="4-一系列辅助工具（如javac）"><a href="#4-一系列辅助工具（如javac）" class="headerlink" title="4.一系列辅助工具（如javac）"></a>4.一系列辅助工具（如javac）</h3><p>  javac就是将我们的程序编译成字节码（.class文件）的编译器。是一个可执行文件。还有一些其他的小工具比如jar，就是一个打包工具，将我们的.class文件打包为jar文件，将来我们想使用我们写好的类和函数的时候，直接引用过来就好了。等等。</p>
 <h4 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h4><p>  JDK（Java developmen kit）是Java程序开发包，它包括以上1,2,3,4所有总和。</p>
@@ -482,7 +482,7 @@
 <h2 id="三-Java技术体系所划分的三大平台"><a href="#三-Java技术体系所划分的三大平台" class="headerlink" title="三.Java技术体系所划分的三大平台"></a>三.Java技术体系所划分的三大平台</h2><h3 id="JavaSE："><a href="#JavaSE：" class="headerlink" title="JavaSE："></a>JavaSE：</h3><p>  主要面向桌面软件，C/S架构的软件平台。</p>
 <h3 id="JavaEE："><a href="#JavaEE：" class="headerlink" title="JavaEE："></a>JavaEE：</h3><p>  现今所有做Java后端开发的领域都是JavaEE的天下。我们需要学的也是JavaEE。JavaEE是在JavaSE的基础上构建的，也就是说JavaSE是JavaEE的一个子集。<br>所谓的学JavaEE，其实就是学JavaEE的各种框架，如spring，structs，hibernate，mybatis，springboot等等。<br>JavaEE才是将来想做Java后端开发的同学们该学的。</p>
 <h3 id="JavaME："><a href="#JavaME：" class="headerlink" title="JavaME："></a>JavaME：</h3><p>  主要做一些嵌入式的开发。面向移动端。</p>
-<h2 id="四-哪一版JDK用得多，适合学习"><a href="#四-哪一版JDK用得多，适合学习" class="headerlink" title="四.哪一版JDK用得多，适合学习"></a>四.哪一版JDK用得多，适合学习</h2><p>==JDK是不分JavaSE、JavaEE、JavaME的==，安装的都是一个东西。就装JavaSE的JDK就行了。<br>现在用JDK1.8的比较多，建议使用JDK1.8就足够了。（虽然现在已经更新到JDK13了）</p>
+<h2 id="四-哪一版JDK用得多，适合学习"><a href="#四-哪一版JDK用得多，适合学习" class="headerlink" title="四.哪一版JDK用得多，适合学习"></a>四.哪一版JDK用得多，适合学习</h2><p><code>JDK是不分JavaSE、JavaEE、JavaME的</code>，安装的都是一个东西。就装JavaSE的JDK就行了。<br>现在用JDK1.8的比较多，建议使用JDK1.8就足够了。（虽然现在已经更新到JDK13了）</p>
 
             </div>
             <hr/>
@@ -729,7 +729,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语法之一：基本程序结构（1）正文1.1 数据类型 整型整型是有符号的整数，==Java中不含无符号整型==。1.int 4字节                            ( 取值范围约为-20亿到正20亿)2.Long 
+                            Java语法之一：基本程序结构（1）正文1.1 数据类型 整型整型是有符号的整数，Java中不含无符号整型。1.int 4字节                            ( 取值范围约为-20亿到正20亿)2.Long 8字节3
                         
                     </div>
                     <div class="publish-info">
