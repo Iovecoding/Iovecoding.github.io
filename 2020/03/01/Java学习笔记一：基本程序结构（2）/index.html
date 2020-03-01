@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java学习笔记一：基本程序结构, 无尽之路">
-    <meta name="description" content="Java语法之一：基本程序结构（1）正文1.1 数据类型 整型整型是有符号的整数，Java中不含无符号整型。1.int 4字节                            ( 取值范围约为-20亿到正20亿)2.Long 8字节3">
+    <meta name="keywords" content="Java学习笔记一：基本程序结构（2）, 无尽之路">
+    <meta name="description" content="Java语法之一：基本程序结构（2）敬告：本文仅为本人学习《java核心技术：卷一》的一篇读书笔记，有相当多的遗漏之处，请勿当做学习资料来使用。
+1.5 输入输出1.5.1 读取输入首先需构造一个Scanner对象，与“标准输入流” Sys">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java学习笔记一：基本程序结构 | 无尽之路</title>
+    <title>Java学习笔记一：基本程序结构（2） | 无尽之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +304,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java学习笔记一：基本程序结构</h1>
+                    <h1 class="description center-align post-title">Java学习笔记一：基本程序结构（2）</h1>
                 </div>
             </div>
         </div>
@@ -471,62 +472,46 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Java语法之一：基本程序结构（1）"><a href="#Java语法之一：基本程序结构（1）" class="headerlink" title="Java语法之一：基本程序结构（1）"></a>Java语法之一：基本程序结构（1）</h1><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="1-1-数据类型"><a href="#1-1-数据类型" class="headerlink" title="1.1 数据类型 "></a><span id = "1.1">1.1 数据类型 </span></h2><h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><p>整型是有符号的整数，<code>Java中不含无符号整型</code>。<br>1.int 4字节                            ( 取值范围约为-20亿到正20亿)<br>2.Long 8字节<br>3.short 2字节<br>4.byte 1字节                            (取值范围为[-128~127])</p>
-<h3 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h3><p>浮点类型表示有符号的小数。<br>1.float 4字节             (取值范围约为±3.402823 e+38)<br>2.double 8字节（取值范围约为±1.79769313486231570 e+308）</p>
-<h3 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h3><p>char 2字节 表示单个字符。也可以用\u加4个16进制数来表示，\u0000~\uffff。</p>
-<h3 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a>boolean类型</h3><p>boolean (布尔）类型有两个值：false 和 true, 用来判定逻辑条件 整型值和布尔值之间<br>不能进行相互转换。<br><a name="1.2">  1.2 </a></p>
-<h2 id="1-2-变量与常量"><a href="#1-2-变量与常量" class="headerlink" title="1.2 变量与常量 "></a><span id = "1.2">1.2 变量与常量 </span></h2><p>在 Java 中，每个变量都有一个类型（ type)。在声明变量时，变量的类型位于变量名之<br>前。<br>声明变量和变量初始化：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> a；<span class="token comment" spellcheck="true">//声明一个整型变量，变量名为a</span>
-<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">2</span>；<span class="token comment" spellcheck="true">//声明一个整型变量，变量名为b，将2赋给b作为它的值。变量的初始化</span></code></pre>
-<p>在 Java 中， 利用关键字 final 指示常量，变量名通常全大写。赋值之后就不可以更改。<br>例如：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">final</span> <span class="token keyword">double</span> PI <span class="token operator">=</span> <span class="token number">3.14159</span>；</code></pre>
-<p><a name="1.3">   </a></p>
-<h2 id="1-3-运算符"><a href="#1-3-运算符" class="headerlink" title="1.3 运算符 "></a><span id = "1.3">1.3 运算符 </span></h2><h3 id="1-3-1-类型转换"><a href="#1-3-1-类型转换" class="headerlink" title="1.3.1 类型转换"></a><span id="1.3.1">1.3.1 类型转换<span></h3><p>对于二元运算 a operation b：<br>•如果两个操作数中有一个是 double 类型， 另一个操作数就会转换为 double 类型。<br>•否则，如果其中一个操作数是 float 类型，另一个操作数将会转换为 float 类型。<br>•否则， 如果其中一个操作数是 long 类型， 另一个操作数将会转换为 long 类型。<br>•否则， 两个操作数都将被转换为 int 类型。</p>
-<h3 id="1-3-2-强制类型转换"><a href="#1-3-2-强制类型转换" class="headerlink" title="1.3.2 强制类型转换"></a><span id="1.3.2">1.3.2 强制类型转换</span></h3><p><img src="https://img-blog.csdnimg.cn/20200222001920820.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt="图1.1"></p>
-<p>图中有 6 个实心箭头，表示无信息丢失的转换；有 3 个虚箭头， 表示可能有精度损失的转换。<br>强制类型转换则是完成虚箭头所表示的转换。</p>
-<p>例如：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">double</span> x <span class="token operator">=</span> <span class="token number">9.997</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> nx <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> x<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将x强制转换为int型</span></code></pre>
-<h3 id="1-3-3-结合赋值运算符"><a href="#1-3-3-结合赋值运算符" class="headerlink" title="1.3.3 结合赋值运算符"></a><span id="1.3.3">1.3.3 结合赋值运算符</span></h3><p>+=，-=，/=, *=….<br>a += b相当于a=a+b<br>如果运算符得到一个值，其类型与左侧操作数的类型不同，救会发生强制类型转换。<br>如：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-x <span class="token operator">+=</span> <span class="token number">3.5</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//是合法的，将把x设置为(int)(x + 3.5)</span></code></pre>
-<h3 id="1-3-4-三目运算符"><a href="#1-3-4-三目运算符" class="headerlink" title="1.3.4 三目运算符"></a><span id="1.3.4">1.3.4 三目运算符</span></h3><p>x = conditon?expression1:expression2<br>condition为true，则x = expression1<br>condition为false，则x = expresson2</p>
-<h3 id="1-3-5-运算符优先级和结合性"><a href="#1-3-5-运算符优先级和结合性" class="headerlink" title="1.3.5 运算符优先级和结合性"></a><span id="1.3.5">1.3.5 运算符优先级和结合性</span></h3><p>从上到下是优先级从高到低，右侧一列是各个运算符的结合性<br><img src="https://img-blog.csdnimg.cn/20200222003250972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">)<img src="https://img-blog.csdnimg.cn/2020022200330052.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="1-4-枚举类型"><a href="#1-4-枚举类型" class="headerlink" title="1.4 枚举类型"></a><span id="1.4">1.4 枚举类型</span></h2><p>枚举类型包括有限个命名的值。<br>也就是说，可以自定义一个只能取某几个特定的值的类型，如服装大小：S，M，L，X。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">enum</span> Size<span class="token punctuation">{</span>“SMALL”，“MEDIUM”，“LARGE”，“EXTRA_LARGE”<span class="token punctuation">}</span>；</code></pre>
-<p><a name="1.4">   </a></p>
-<h2 id="1-5-字符串"><a href="#1-5-字符串" class="headerlink" title="1.5 字符串 "></a><span id="1.5">1.5 字符串 </span></h2><p>每个用双引号括起来的字符串都是 String类的一个实例。</p>
-<h3 id="1-5-1-子串"><a href="#1-5-1-子串" class="headerlink" title="1.5.1 子串"></a><span id="1.5.1">1.5.1 子串</span></h3><pre class=" language-java"><code class="language-java">String greeting <span class="token operator">=</span> “Hello”<span class="token punctuation">;</span>
-String S <span class="token operator">=</span> greeting<span class="token punctuation">.</span><span class="token function">subString</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//S是“Hel”，不包括从0开始第三个字符。</span>
-<span class="token comment" spellcheck="true">//S.subString(a,b)长度为b-a</span></code></pre>
-<h3 id="1-5-2-拼接"><a href="#1-5-2-拼接" class="headerlink" title="1.5.2 拼接"></a><span id = "1.5.2">1.5.2 拼接</span></h3><p>把多个字符串直接拼接用 ‘+’。<br>把多个字符串之间加上分隔符，如 ‘/‘ 用静态方法 String.join() 方法拼接在一起。<br>例：</p>
-<pre class=" language-java"><code class="language-java">String all <span class="token operator">=</span> String<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">,</span><span class="token string">"S"</span><span class="token punctuation">,</span><span class="token string">"M"</span><span class="token punctuation">,</span><span class="token string">"L"</span><span class="token punctuation">,</span><span class="token string">"XL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//all的值为"S/M/L/XL"</span></code></pre>
-<h3 id="1-5-3-不可变字符串"><a href="#1-5-3-不可变字符串" class="headerlink" title="1.5.3 不可变字符串"></a><span id = "1.5.3">1.5.3 不可变字符串</span></h3><p>字符串不可修改，只能重新赋值。</p>
-<h3 id="1-5-4-判断字符串是否相等"><a href="#1-5-4-判断字符串是否相等" class="headerlink" title="1.5.4 判断字符串是否相等"></a><span id = "1.5.4">1.5.4 判断字符串是否相等</span></h3><p>用String的实例化方法s.equals(t); 返回值是boolean值，相等返回true，不相等返回false。</p>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><p>1.<code>不要用“= =”判断字符串是否相等</code>，Java字符串是一个指针，如果两字符串指向的位置不同，但这两个位置保存的内容一样，还是会判断为不相等。<br>2.判断串是否为“NULL”用“= = ”，串值为“NULL”与空串不等价。<br>空串是一个字符串对象，只是长度为0，可以调用实例函数。<br>串值NULL表示没有任何对象与之关联，不可以调用函数。<br>例：</p>
-<pre class=" language-java"><code class="language-java">String a <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-String b <span class="token operator">=</span> NULL<span class="token punctuation">;</span>
-a<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//no error</span>
-b<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//error 无法调用方法</span></code></pre>
-<h3 id="1-5-5-String-常用函数"><a href="#1-5-5-String-常用函数" class="headerlink" title="1.5.5 String 常用函数"></a><span id="1.5.5">1.5.5 String 常用函数</span></h3><p> • char charAt (int index)<br>返回给定位置的代码单元。除非对底层的代码单元感兴趣， 否则不需要调用这个方法。</p>
-<p> • int codePointAt(int Index) 5.0<br>返回从给定位置开始的码点。</p>
-<p> • int offsetByCodePoints(int startlndex, int cpCount) 5.0<br>返回从 startlndex 代码点开始，位移 cpCount 后的码点索引。 </p>
-<p> • int compareTo(String other)<br>按照字典顺序，如果字符串位于 other 之前， 返回一个负数；如果字符串位于 other 之 后，返回一个正数；如果两个字符串相等，返回 0。</p>
-<p> • IntStream codePoints() 8<br>将这个字符串的码点作为一个流返回。调用 toArray 将它们放在一个数组中。</p>
-<p> • new String(int[] codePoints, int offset, int count) 5.0<br>用数组中从 offset 开始的 count 个码点构造一个字符串。</p>
-<p> • boolean equals(0bject other)<br>如果字符串与 other 相等， 返回 true。</p>
-<p> •boolean equalsIgnoreCase(String other )<br>如果字符串与 other 相等 （ 忽略大小写，) 返回 tme。</p>
-<p> •boolean startsWith(String prefix ) •boolean endsWith(String suffix )<br>如果字符串以 suffix 开头或结尾， 则返回 true。</p>
-<p> •int indexOf(String str)<br> •int indexOf(String str, int fromlndex )<br> •int indexOf(int cp)<br> •int indexOf(int cp, int fromlndex )<br>返回与字符串 str 或代码点 cp 匹配的第一个子串的开始位置。这个位置从索引 0 或 fromlndex 开始计算。 如果在原始串中不存在 str，返回 -1。</p>
-<p> •int 1astIndexOf(String str)<br> •int 1astIndexOf(String str, int fromlndex )<br> •int lastindexOf(int cp)<br> •int 1astindexOf(int cp, int fromlndex )<br>返回与字符串 str 或代码点 cp 匹配的最后一个子串的开始位置。 这个位置从原始串尾端或 fromlndex 开始计算。</p>
-<p> •int length( )<br>返回字符串的长度。 </p>
-<p> •int codePointCount(int startlndex , int endlndex ) 5.0<br>返回 startlndex 和 endludex-l之间的代码点数量。没有配成对的代用字符将计入代码点。</p>
-<p> • String replace( CharSequence oldString,CharSequence newString)<br>返回一个新字符串。这个字符串用 newString 代替原始字符串中所有的 oldString。可以用 String 或 StringBuilder 对象作为 CharSequence 参数。</p>
-<p> •String substring(int beginlndex )<br> • String substring(int beginlndex, int endlndex )<br>返回一个新字符串。这个字符串包含原始字符串中从 beginlndex 到串尾或 endlndex-l 的所有代码单元。</p>
-<p> •String toLowerCase( ) 參 String toUpperCase( )<br>返回一个新字符串。 这个字符串将原始字符串中的大写字母改为小写，或者将原始字符串中的所有小写字母改成了大写字母。 </p>
-<p> •String trim( )<br>返回一个新字符串。这个字符串将删除了原始字符串头部和尾部的空格。 </p>
-<p> •String join(CharSequence delimiter, CharSequence … elements ) 8<br>返回一个新字符串， 用给定的定界符连接所有元素。</p>
+                <h1 id="Java语法之一：基本程序结构（2）"><a href="#Java语法之一：基本程序结构（2）" class="headerlink" title="Java语法之一：基本程序结构（2）"></a>Java语法之一：基本程序结构（2）</h1><p><code>敬告：本文仅为本人学习《java核心技术：卷一》的一篇读书笔记，有相当多的遗漏之处，请勿当做学习资料来使用。</code></p>
+<h2 id="1-5-输入输出"><a href="#1-5-输入输出" class="headerlink" title="1.5 输入输出"></a><span id="1.5">1.5 输入输出</span></h2><h3 id="1-5-1-读取输入"><a href="#1-5-1-读取输入" class="headerlink" title="1.5.1 读取输入"></a><span id = "1.5.1">1.5.1 读取输入</span></h3><p>首先需构造一个Scanner对象，与“标准输入流” System.in 相关联。</p>
+<pre class=" language-java"><code class="language-java">Scanner in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>System<span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+String name <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">nextLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//读一行，可能包含空格</span>
+String firstName <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//读一个单词，不包含空格</span>
+<span class="token keyword">int</span> age <span class="token operator">=</span> in<span class="token punctuation">.</span><span class="token function">nextInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//读一个整数</span></code></pre>
+<p>Scanner 在Java.util包中，使用需要import java.util.*;</p>
+<h3 id="1-5-2-格式化输出"><a href="#1-5-2-格式化输出" class="headerlink" title="1.5.2 格式化输出"></a><span id = "1.5.2">1.5.2 格式化输出</span></h3><p>System.out.printf(); 和c语言一样<br>在 printf中，可以使用多个参数， 例如：</p>
+<pre class=" language-java"><code class="language-java">System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"Hello, %s. Next year, you'll be SSd"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>每一个以 ％ 字符开始的格式说明符都用相应的参数替换。 格式说明符尾部的转换符将指示被<br>格式化的数值类型：f 表示浮点数，s 表示字符串，d 表示十进制整数。<br>例如 ：<br>System.out.printf(“%8.2f”,x);<br>可以用 8 个字符的宽度和小数点后两个字符的精度打印 x。也就是说，打印输出一个空格和7 个字符， 如下所示：<br> 3333.33<br><img src="https://img-blog.csdnimg.cn/20200222193930292.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt="图1.5.1">另外，还可以给出控制格式化输出的各种标志。可以使用多个标志，例如，“ ％,( .2f” 使用分组的分隔符并将负数括在括号内。<br><img src="https://img-blog.csdnimg.cn/20200222193638593.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt="图1.5.2"><br>可通过静态的String.format方法创建一个格式化的字符串：</p>
+<pre class=" language-java"><code class="language-java">String message <span class="token operator">=</span> String<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"Hello,%s.Next year,you"</span>ll be <span class="token operator">%</span>d years old<span class="token punctuation">.</span>"<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><strong>可用参数索引来进行格式化，参数索引从1开始</strong></p>
+<pre class=" language-java"><code class="language-java">String message <span class="token operator">=</span> String<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"Hello,%1$s.Next year,you'll be %2$d years old"</span><span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//%1表示第一个参数name,%2表示第二个参数age.</span>
+<span class="token comment" spellcheck="true">//参数索引适用于重复输出同一个参数时</span></code></pre>
+<p>%&lt; 表示再次输出前一个参数，适用于<code>连续</code>重复输出同一个参数时</p>
+<p><img src="https://img-blog.csdnimg.cn/20200222194453433.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt="图1.5.3 格式说明符语法"></p>
+<h3 id="1-5-3-文件的输入和输出"><a href="#1-5-3-文件的输入和输出" class="headerlink" title="1.5.3 文件的输入和输出"></a><span id = "1.5.3">1.5.3 文件的输入和输出</span></h3><p><strong>读文件：用Paths对象构造一个Scanner对象</strong></p>
+<pre class=" language-java"><code class="language-java">Scanner in <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span>paths<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"myfile.txt"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>现在，就可以利用前面介绍的任何一个 Scanner 方法对文件进行读取<br><strong>写文件：构造一个PrintWritter对象</strong></p>
+<pre class=" language-java"><code class="language-java">PrintWritter out <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintWritter</span><span class="token punctuation">(</span><span class="token string">"myfile.txt"</span><span class="token punctuation">,</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>out 可使用 print，println，printf命令</p>
+<h2 id="1-6-数组"><a href="#1-6-数组" class="headerlink" title="1.6 数组"></a><span id="1.6">1.6 数组</span></h2><p>int [] a;<br>int [] a = new int[100];</p>
+<h3 id="1-6-1-for-each循环"><a href="#1-6-1-for-each循环" class="headerlink" title="1.6.1 for each循环"></a><span id="1.6.1">1.6.1 for each循环</span></h3><pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> e<span class="token operator">:</span>a<span class="token punctuation">)</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//a是一个整形数组</span></code></pre>
+<p><strong>Arrays.tostring()</strong><br>a = {2,3,5,7};<br>System.out.println(Arrays.tostring(a));<br>输出：<br>[2,3,5,7]</p>
+<p>返回一个包含数组元素的字符串，元素用“，”分隔，放置在括号内。</p>
+<h3 id="1-6-2-数组初始化"><a href="#1-6-2-数组初始化" class="headerlink" title="1.6.2 数组初始化"></a><span id="1.6.2">1.6.2 数组初始化</span></h3><pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> smallPrimes <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">}</span>；
+<span class="token comment" spellcheck="true">//或</span>
+<span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> smallPrimes<span class="token punctuation">;</span>
+smallPrimes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">13</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//匿名数组</span></code></pre>
+<h3 id="1-6-3-数组拷贝"><a href="#1-6-3-数组拷贝" class="headerlink" title="1.6.3 数组拷贝"></a><span id="1.6.3">1.6.3 数组拷贝</span></h3><pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> copiedLuckyNumbers <span class="token operator">=</span> Arrays<span class="token punctuation">.</span><span class="token function">copyOf</span><span class="token punctuation">(</span>LuckyNUmbers<span class="token punctuation">,</span><span class="token number">2</span><span class="token operator">*</span>LuckyNumbers<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//第一个参数是被copy的数组，第二个参数是新数组长度</span></code></pre>
+<p>当新数组长度&gt;原数组长度时：<br>若为数值型数组，则多余元素为0；<br>若为bool型数组，多余元素为flase；</p>
+<h3 id="1-6-4-数组排序"><a href="#1-6-4-数组排序" class="headerlink" title="1.6.4 数组排序"></a><span id="1.6.4">1.6.4 数组排序</span></h3><p>用Arrays.sort()函数，用优化的快速排序算法将数值型数组从小到大排序。参数为数值型数组。</p>
+<h3 id="1-6-5-多维数组"><a href="#1-6-5-多维数组" class="headerlink" title="1.6.5 多维数组"></a><span id="1.6.5">1.6.5 多维数组</span></h3><p>double[][] balance = new double[N1][N2];<br>用两层循环或Arrays.deepToString()输出二维数组。</p>
+<h3 id="1-6-6-不规则数组"><a href="#1-6-6-不规则数组" class="headerlink" title="1.6.6 不规则数组"></a><span id="1.6.6">1.6.6 不规则数组</span></h3><p>如：<br>1<br>1 1<br>1 2  1<br>1 3  3    1<br>1 4   6   4   1<br>1 5  10  10  5  1<br>1 6  15  20 15 6  1<br>则新建一个不规则数组如下</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> odds <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>N<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>n<span class="token operator">&lt;=</span>N<span class="token punctuation">;</span>n<span class="token operator">++</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//对每一行都要再申请一个一维数组</span>
+    odds<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
 
             </div>
             <hr/>
@@ -552,7 +537,7 @@ b<span class="token punctuation">.</span><span class="token function">length</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ioveding.github.io/2020/03/01/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/">http://Ioveding.github.io/2020/03/01/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/</a>
+                    <a href="http://Ioveding.github.io/2020/03/01/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%EF%BC%882%EF%BC%89/">http://Ioveding.github.io/2020/03/01/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%EF%BC%882%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -765,26 +750,79 @@ b<span class="token punctuation">.</span><span class="token function">length</sp
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/01/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84%EF%BC%882%EF%BC%89/">
+                <a href="/2020/03/01/win10%E7%B3%BB%E7%BB%9F%E4%B8%8Bjdk1-8%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E9%85%8D%E7%BD%AE/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Java学习笔记一：基本程序结构（2）">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="win10系统下jdk1.8的安装和环境变量的配置">
                         
-                        <span class="card-title">Java学习笔记一：基本程序结构（2）</span>
+                        <span class="card-title">win10系统下jdk1.8的安装和环境变量的配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Java语法之一：基本程序结构（2）敬告：本文仅为本人学习《java核心技术：卷一》的一篇读书笔记，有相当多的遗漏之处，请勿当做学习资料来使用。
-1.5 输入输出1.5.1 读取输入首先需构造一个Scanner对象，与“标准输入流” Sys
+                            对如何配置Java环境变量做个总结，以便以后忘了回来看。
+安装JDK1.8直接放上网盘下载地址https://pan.baidu.com/s/17lWcvbkE6PES5LnCGw8eOg提取码:s8d2下完了就运行带java图标的那个ex
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
                         </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">Java基础</span>
+                    </a>
+                    
+                    <a href="/tags/Java%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">Java安装教程</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/01/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%9F%BA%E6%9C%AC%E7%A8%8B%E5%BA%8F%E7%BB%93%E6%9E%84/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Java学习笔记一：基本程序结构">
+                        
+                        <span class="card-title">Java学习笔记一：基本程序结构</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java语法之一：基本程序结构（1）正文1.1 数据类型 整型整型是有符号的整数，Java中不含无符号整型。1.int 4字节                            ( 取值范围约为-20亿到正20亿)2.Long 8字节3
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -806,58 +844,6 @@ b<span class="token punctuation">.</span><span class="token function">length</sp
                     
                     <a href="/tags/Java%E8%AF%AD%E6%B3%95/">
                         <span class="chip bg-color">Java语法</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/01/Java-0%E5%9F%BA%E7%A1%80%E5%88%9D%E5%AD%A6%E8%80%85%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Java:0基础初学者必备知识">
-                        
-                        <span class="card-title">Java:0基础初学者必备知识</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            今天来系统的整理一下Java生态体系的各项基本概念。
-一.Java技术体系  用Java写出的代码，要运行在计算机上，进行各种各样的工作，需要以下几个关键部分的支持。
-1.Java程序设计语言  没什么可说的，就是Java语言自身。
-2.各
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    Java基础
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Java基础</span>
                     </a>
                     
                 </div>
