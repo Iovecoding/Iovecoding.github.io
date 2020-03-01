@@ -26,7 +26,7 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -325,9 +325,9 @@
                     var typed = new Typed("#subtitle", {
                         strings: ['终日不食，终夜不寝，以思，无益，不如学也',''],
                         startDelay: 300,
-                        typeSpeed: 100,
+                        typeSpeed: 120,
                         loop: true,
-                        backSpeed: 50,
+                        backSpeed: 100,
                         showCursor: true
                     });
                 </script>
@@ -362,7 +362,17 @@
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">2</a></span>
+    <span class="name">分类</span>
+</div>
 
+
+
+<div class="statis">
+    <span class="count"><a href="/tags">2</a></span>
+    <span class="name">标签</span>
+</div>
 
 
                     </div>
@@ -382,7 +392,17 @@
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">2</a></span>
+    <span class="name">分类</span>
+</div>
 
+
+
+<div class="statis">
+    <span class="count"><a href="/tags">2</a></span>
+    <span class="name">标签</span>
+</div>
 
 
                                 </div>
@@ -566,7 +586,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
+                data: [{"name":"Java基础","value":1},{"name":"Java基本语法","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -590,7 +610,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: []
+                data: ["Java基础","Java语法"]
             }
         ],
         yAxis: [
@@ -603,7 +623,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [],
+                data: [2,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -769,6 +789,18 @@
     <div class="other-skills chip-container" data-aos="zoom-in-up">
         <div class="sub-title center-align"><i class="fa fa-book"></i>&nbsp;&nbsp;其他技能</div>
         <div class="tag-chips center-align">
+            
+            
+            <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
+                <span class="chip center-align waves-effect waves-light chip-default">Java基础</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Java%E8%AF%AD%E6%B3%95/">
+                <span class="chip center-align waves-effect waves-light chip-default">Java语法</span>
+            </a>
+            
             
         </div>
     </div>
