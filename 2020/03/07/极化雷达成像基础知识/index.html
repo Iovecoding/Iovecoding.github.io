@@ -4,10 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java学习笔记三：继承和多态, 无尽之路">
-    <meta name="description" content="5.1 类，父类与子类5.1.1 子类定义与方法覆盖1.子类可以继承父类成员变量与方法，通过extends 关键字。
-class subClass extends parentClass{...}
-2.子类可以通过定义相同签名的方法来覆盖父">
+    <meta name="keywords" content="极化雷达成像基础知识, 无尽之路">
+    <meta name="description" content="电磁波的极化状态电磁波除了幅度 ，相位，频率特征之外，还有极化这一基本特征。（极化就是偏振，就是光只沿某一个方向震动）
+电磁波的极化：根据电磁波在垂直与传播方向平面上的投影轨迹，把电磁波分为三类。
+1.线极化电磁波
+
+2.圆极化电磁波
+
+3">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +19,7 @@ class subClass extends parentClass{...}
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java学习笔记三：继承和多态 | 无尽之路</title>
+    <title>极化雷达成像基础知识 | 无尽之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +309,12 @@ class subClass extends parentClass{...}
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java学习笔记三：继承和多态</h1>
+                    <h1 class="description center-align post-title">极化雷达成像基础知识</h1>
                 </div>
             </div>
         </div>
@@ -427,12 +431,12 @@ class subClass extends parentClass{...}
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">Java基础</span>
+                            <a href="/tags/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE/">
+                                <span class="chip bg-color">极化雷达</span>
                             </a>
                         
-                            <a href="/tags/Java%E8%AF%AD%E6%B3%95/">
-                                <span class="chip bg-color">Java语法</span>
+                            <a href="/tags/SAR/">
+                                <span class="chip bg-color">SAR</span>
                             </a>
                         
                     </div>
@@ -443,8 +447,8 @@ class subClass extends parentClass{...}
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-category">
-                                Java基本语法
+                            <a href="/categories/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F/" class="post-category">
+                                极化雷达成像
                             </a>
                         
                     </div>
@@ -456,7 +460,7 @@ class subClass extends parentClass{...}
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-03
+                    2020-03-07
                 </div>
                 
 
@@ -473,96 +477,24 @@ class subClass extends parentClass{...}
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="5-1-类，父类与子类"><a href="#5-1-类，父类与子类" class="headerlink" title="5.1 类，父类与子类"></a>5.1 类，父类与子类</h2><h3 id="5-1-1-子类定义与方法覆盖"><a href="#5-1-1-子类定义与方法覆盖" class="headerlink" title="5.1.1 子类定义与方法覆盖"></a>5.1.1 子类定义与方法覆盖</h3><p>1.子类可以继承父类成员变量与方法，通过<strong>extends</strong> 关键字。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">subClass</span> <span class="token keyword">extends</span> <span class="token class-name">parentClass</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre>
-<p>2.子类可以通过定义相同签名的方法来覆盖父类方法(无需关键字)。<br>3.子类不可访问父类私有方法及成员变量，可通过<strong>super.XXX</strong>来访问父类非私有成员变量与方法。<br>4.父类被覆盖的方法也可用<strong>super.XXX</strong>在子类中调用。<br>5.子类中可以增加成员变量，方法和覆盖方法，但不可以删除父类的任何变量与方法。<br>6.子类覆盖父类方法时，可见性不能低于父类方法。如父类是<strong>public</strong>，子类必须为<strong>public</strong>。<br>7.每个类只可有一个父类，但一个类可以用无限多个子类。</p>
-<h3 id="5-1-2-子类构造器"><a href="#5-1-2-子类构造器" class="headerlink" title="5.1.2 子类构造器"></a>5.1.2 子类构造器</h3><p>子类构造器的第一条语句必须使用<strong>super(….)</strong>调用父类构造器。<br>例:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token function">Manager</span><span class="token punctuation">(</span>String Name<span class="token punctuation">,</span><span class="token keyword">double</span> Salary<span class="token punctuation">,</span><span class="token keyword">int</span> year<span class="token punctuation">,</span><span class="token keyword">int</span> month<span class="token punctuation">,</span><span class="token keyword">int</span> day<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>salary<span class="token punctuation">,</span>year<span class="token punctuation">,</span>month<span class="token punctuation">,</span>day<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    bounus <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>如果子类构造器没有调用父类的构造器，则将自动调用父类的无参构造器。若父类无无参构造器，则会报错。</p>
-<h3 id="5-1-3-多态"><a href="#5-1-3-多态" class="headerlink" title="5.1.3 多态"></a>5.1.3 多态</h3><p>多态：一个对象，两种形态（或多种形态）。<br>对象的多态：每一个子类对象首先也是一个父类对象（is-a规则）。<br>因为子类是从父类派生而来，它保留了父类的所有特征，并加以丰富和修改。如每一个dog也是一个animal，它首先是一个动物，然后才是狗。<br>可以将一个子类对象赋给父类变量，但<code>该变量不可以使用子类中特有的方法，只能调用父类原有的方法，如果子类覆盖了父类的方法，那么该变量会调用子类覆盖后的方法</code>。<br>例：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Employee</span><span class="token punctuation">{</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">double</span> salary<span class="token punctuation">;</span>
-    <span class="token keyword">protected</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> LocalDate hireDay<span class="token punctuation">;</span>
-
-    <span class="token keyword">public</span> <span class="token function">Employee</span><span class="token punctuation">(</span>String n<span class="token punctuation">,</span><span class="token keyword">double</span> s<span class="token punctuation">,</span><span class="token keyword">int</span> year<span class="token punctuation">,</span><span class="token keyword">int</span> month<span class="token punctuation">,</span><span class="token keyword">int</span> day<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//父类构造器</span>
-        name <span class="token operator">=</span> n<span class="token punctuation">;</span>
-        salary <span class="token operator">=</span> s<span class="token punctuation">;</span>
-        hireDay <span class="token operator">=</span> LocalDate<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>year<span class="token punctuation">,</span>month<span class="token punctuation">,</span>day<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>salary<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> LocalDate <span class="token function">getHireDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hireDay<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">raiseSalary</span><span class="token punctuation">(</span><span class="token keyword">double</span> byPercent<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//按比例加薪</span>
-        <span class="token keyword">double</span> raise <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>salary<span class="token operator">*</span>byPercent<span class="token operator">/</span><span class="token number">100</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>salary <span class="token operator">+=</span> raise<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">class</span> <span class="token class-name">Manager</span> <span class="token keyword">extends</span> <span class="token class-name">Employee</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">double</span> bonus<span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">Manager</span><span class="token punctuation">(</span>String n<span class="token punctuation">,</span> <span class="token keyword">double</span> s<span class="token punctuation">,</span> <span class="token keyword">int</span> year<span class="token punctuation">,</span> <span class="token keyword">int</span> month<span class="token punctuation">,</span> <span class="token keyword">int</span> day<span class="token punctuation">,</span><span class="token keyword">int</span> bonus<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> s<span class="token punctuation">,</span> year<span class="token punctuation">,</span> month<span class="token punctuation">,</span> day<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用父类构造器</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>bonus <span class="token operator">=</span> bonus<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//覆盖父类方法</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>bonus<span class="token operator">+</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用父类方法</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getBonus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//子类特有方法</span>
-       <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>bonus<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setBonus</span><span class="token punctuation">(</span><span class="token keyword">double</span> b<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>bonus <span class="token operator">=</span> b<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-java"><code class="language-java">Employee e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Manager</span><span class="token punctuation">(</span>“Bob”<span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">2002</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将子类对象赋给父类变量</span>
-e<span class="token punctuation">.</span><span class="token function">getBounus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//error，父类变量无法调用子类特有方法。</span>
-<span class="token keyword">double</span> s <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//e = 1500.调用子类覆盖了的getSalary方法</span></code></pre>
-<h3 id="5-1-4-方法调用"><a href="#5-1-4-方法调用" class="headerlink" title="5.1.4 方法调用"></a>5.1.4 方法调用</h3><p>java编译器确定调用的是哪个方法的步骤：<br>（1）先将类中同名的，声明类型符合的方法罗列出来。<br>（2）查看这些方法中有没有参数类型匹配上的。</p>
-<p>注意：子类覆盖父类方法时，可改变其返回值。因为返回值不属于方法签名。但是不可以改变父类方法的参数，因为参数属于方法签名，如果改变了参数，就相当于定义了一个子类特有的新方法，不再是覆盖了。</p>
-<p>动态绑定：只有运行时才知道是哪类对象调用了方法。<br>例：</p>
-<pre class=" language-java"><code class="language-java">Employee e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Manager</span><span class="token punctuation">(</span>“Bob”<span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">2002</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将子类对象赋给父类变量</span>
-e<span class="token punctuation">.</span><span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//动态绑定，只有运行时才知道e调用的是子类的覆盖方法</span></code></pre>
-<p>静态绑定：调用private、static、final方法或者类构造器，这类方法能在编译时就确定是哪类对象调用的。</p>
-<h3 id="5-1-5-阻止继承：final类和方法"><a href="#5-1-5-阻止继承：final类和方法" class="headerlink" title="5.1.5 阻止继承：final类和方法"></a>5.1.5 阻止继承：final类和方法</h3><p>不可以被继承的类为final类。<br>例：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">XXX</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre>
-<p>非final类中的特定方法也可被声明为 final，这样子类就不能覆盖该方法(final类中所有方法自动成为final方法)。<br>成员变量也可以为final，被赋值后不可修改（成员变量的final和方法的final意义截然不同）。<br>将类声明为final，只有其中的方法自动变为final，而不包括成员变量。</p>
-<h3 id="5-1-6-强制类型转换"><a href="#5-1-6-强制类型转换" class="headerlink" title="5.1.6 强制类型转换"></a>5.1.6 强制类型转换</h3><p>将某个类的对象转换成另一个类的引用。<br>进行类型转换的唯一原因：在暂时忽略对象的实际类型之后，使用对象的全部功能。<br>比如将子类对象赋值给父类变量时，该变量无法调用子类的特有方法，所以要将其强制转换为子类变量。<br>只有父类变量转换为子类变量时，才需要强制类型转换，将转换类型用括号括起来。</p>
-<p>在进行类型转换之前，需要用<strong>instanof</strong>判断能否成功转换。<br>如：</p>
-<pre class=" language-java"><code class="language-java">Employee e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">Manager</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    Manaer boss <span class="token operator">=</span> <span class="token punctuation">(</span>Manager e<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//这种情况是不能成功转换的，如果不用instanceof检测会抛出异常</span>
-<span class="token punctuation">}</span></code></pre>
-<p>综上：<br>1.只能在继承层次进行类型转换（从父转子需强制转换）<br>2.将父类转换为子类之前，应该用instanceof进行检查。<br>3.<code>尽量少使用强制转换和instanceof</code>。</p>
-<h3 id="5-1-7-抽象类"><a href="#5-1-7-抽象类" class="headerlink" title="5.1.7 抽象类"></a>5.1.7 抽象类</h3><p>当一个方法不需要在当前类中实现，只需要在子类中实现时，可用abstract关键字。<br>如定义一个Person类，该类用来描述一个人的基本信息。现在要在该类中加入一个getDescription方法用来输出对一个人的一段描述。<br>那么在Person类中，该方法不容易实现，因为只是对一个人的描述不可能做到非常具体，但是在其子类Student和Emoloyee中，该方法很好具体实现。</p>
-<p>抽象类：包含一个或多个抽象方法的类必须被声明为抽象的<strong>abstract</strong>。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Person</span>
-<span class="token punctuation">{</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token keyword">public</span> abstact String <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">}</span></code></pre>
-<p>除抽象方法外，抽象类还可包含具体数据和具体方法。<br>如果子类不定义父类抽象方法或只定义了部分抽象方法，那必须将子类也标记为抽象类。<br>如果子类定义了全部抽象方法，那子类也就不是抽象类了。除非又定义了新的抽象方法。<br>类即使不含抽象方法，也可以将类声明为抽象类。<br>抽象类不可被实例化。<br>可定义一个抽象类<code>对象变量</code>，它只能引用非抽象的子类的对象。但是和之前在多态中说过的一样，不能调用子类的特有方法。</p>
-<h3 id="5-1-8-控制可见性的4个访问修饰符"><a href="#5-1-8-控制可见性的4个访问修饰符" class="headerlink" title="5.1.8 控制可见性的4个访问修饰符"></a>5.1.8 控制可见性的4个访问修饰符</h3><p>（1）仅对本类可见—–private.<br>（2）对所有类可见—–public.<br>（3）对本包和所有子类可见—–protected.<br>（4）对本包可见——–默认，无需修饰符.</p>
+                <h3 id="电磁波的极化状态"><a href="#电磁波的极化状态" class="headerlink" title="电磁波的极化状态"></a>电磁波的极化状态</h3><p>电磁波除了幅度 ，相位，频率特征之外，还有极化这一基本特征。（极化就是偏振，就是光只沿某一个方向震动）</p>
+<p>电磁波的极化：根据电磁波在垂直与传播方向平面上的投影轨迹，把电磁波分为三类。</p>
+<p>1.线极化电磁波</p>
+<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/.%5C%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%5Cxianjihua.png" alt="线极化"></p>
+<p>2.圆极化电磁波</p>
+<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/.%5C%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%5Cyuanjihua.png" alt="圆极化"></p>
+<p>3.椭圆极化电磁波</p>
+<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/.%5C%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%5Ctuoyuanjihua.png" alt="椭圆极化"></p>
+<h3 id="立体角"><a href="#立体角" class="headerlink" title="立体角"></a>立体角</h3><p>以观测点为球心，构造一个单位球面；任意物体投射到该球面上的<code>投影面积</code>，即为该物体相对于该观测点的立体角。</p>
+<p>因此，立体角是单位球面上的一块面积，这和“平面角是单位圆上的一段弧长”类似。</p>
+<p>单位立体角：</p>
+<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/.%5C%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%5Clitijiao.jpg" alt="单位立体角"></p>
+<p>单位立体角进行球面积分就是立体角。</p>
+<h3 id="雷达散射截面（回波散射截面）"><a href="#雷达散射截面（回波散射截面）" class="headerlink" title="雷达散射截面（回波散射截面）"></a>雷达散射截面（回波散射截面）</h3><p>表征了目标在雷达波照射下所产生的回波强度的一种物理量。</p>
+<p>定义：目标在雷达接收天线方向上<code>单位立体角</code>上反射的功率与入射到目标处的功率密度之比。（雷达散射截面单位是平方米）</p>
+<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/.%5C%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%5Cdingyi.png" alt="定义"></p>
+<p>这个r表示的就是雷达和目标的距离，Es表示在雷达接收方向上的反射功率，E1表示发射功率。</p>
+<p>这个截面的大小就反映了目标对雷达波的反射和吸收能力，隐形飞机的隐形性能靠它来评价。当然也可以用这个特性来辨别地物是什么类型。</p>
 
             </div>
             <hr/>
@@ -588,7 +520,7 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ioveding.github.io/2020/03/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%EF%BC%9A%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/">http://Ioveding.github.io/2020/03/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%EF%BC%9A%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/</a>
+                    <a href="http://Ioveding.github.io/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">http://Ioveding.github.io/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -626,12 +558,12 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">Java基础</span>
+                                <a href="/tags/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE/">
+                                    <span class="chip bg-color">极化雷达</span>
                                 </a>
                             
-                                <a href="/tags/Java%E8%AF%AD%E6%B3%95/">
-                                    <span class="chip bg-color">Java语法</span>
+                                <a href="/tags/SAR/">
+                                    <span class="chip bg-color">SAR</span>
                                 </a>
                             
                         </div>
@@ -802,7 +734,7 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
         repo: 'Iovecoding.github.io',
         owner: 'Iovecoding',
         admin: ["Extreme Ways","Iovecoding"],
-        id: '2020-03-03T22-42-15',
+        id: '2020-03-07T00-56-55',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -823,9 +755,70 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="极化雷达成像基础知识">
+                        
+                        <span class="card-title">极化雷达成像基础知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            电磁波的极化状态电磁波除了幅度 ，相位，频率特征之外，还有极化这一基本特征。（极化就是偏振，就是光只沿某一个方向震动）
+电磁波的极化：根据电磁波在垂直与传播方向平面上的投影轨迹，把电磁波分为三类。
+1.线极化电磁波
+
+2.圆极化电磁波
+
+3
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F/" class="post-category">
+                                    极化雷达成像
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE/">
+                        <span class="chip bg-color">极化雷达</span>
+                    </a>
+                    
+                    <a href="/tags/SAR/">
+                        <span class="chip bg-color">SAR</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/03/06/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E2%80%94%E2%80%94%E6%9C%80%E5%88%9D%E7%9A%84%E6%AC%A7%E4%BA%9A%E5%A4%A7%E9%99%86%E6%96%87%E6%98%8E/">
                     <div class="card-image">
@@ -846,65 +839,8 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    全球通史读书笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%8E%86%E5%8F%B2/">
-                        <span class="chip bg-color">历史</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2/">
-                        <span class="chip bg-color">全球通史</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/03/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E2%80%94%E2%80%94%E5%8F%B2%E5%89%8D%E4%BA%BA%E7%B1%BB/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="全球通史——史前人类">
-                        
-                        <span class="card-title">全球通史——史前人类</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            史前人类人类——食物采集者地球形成于50亿年之前，40亿年前出现最早的生命：原生单细胞生物。
-进化的过程：微生物——原始生物（海藻）——无脊椎动物（水母）——脊椎动物。
-3亿年前，进入陆地。
-人类：
-最早猿人：南方古猿——400多万年前，非
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
                             </span>
                         <span class="publish-author">
                             

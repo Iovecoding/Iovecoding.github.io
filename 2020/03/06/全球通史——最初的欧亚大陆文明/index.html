@@ -4,10 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java学习笔记三：继承和多态, 无尽之路">
-    <meta name="description" content="5.1 类，父类与子类5.1.1 子类定义与方法覆盖1.子类可以继承父类成员变量与方法，通过extends 关键字。
-class subClass extends parentClass{...}
-2.子类可以通过定义相同签名的方法来覆盖父">
+    <meta name="keywords" content="“最初的欧亚大陆文明, 无尽之路">
+    <meta name="description" content="最初的欧亚大陆文明 （BC 3500——BC 1000）综述最早的文明中心：苏美尔（美索不达米亚）伊拉克南部，南临波斯湾。
+文明与新石器时代部落文化区别：城市中心，制度确立的政治权利，纳贡或税收，文字，阶级等。
+技术革新：
+灌溉术，冶金术（">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +16,7 @@ class subClass extends parentClass{...}
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Java学习笔记三：继承和多态 | 无尽之路</title>
+    <title>“最初的欧亚大陆文明 | 无尽之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +306,12 @@ class subClass extends parentClass{...}
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java学习笔记三：继承和多态</h1>
+                    <h1 class="description center-align post-title">“最初的欧亚大陆文明</h1>
                 </div>
             </div>
         </div>
@@ -427,12 +428,12 @@ class subClass extends parentClass{...}
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">Java基础</span>
+                            <a href="/tags/%E5%8E%86%E5%8F%B2/">
+                                <span class="chip bg-color">历史</span>
                             </a>
                         
-                            <a href="/tags/Java%E8%AF%AD%E6%B3%95/">
-                                <span class="chip bg-color">Java语法</span>
+                            <a href="/tags/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2/">
+                                <span class="chip bg-color">全球通史</span>
                             </a>
                         
                     </div>
@@ -443,8 +444,8 @@ class subClass extends parentClass{...}
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-category">
-                                Java基本语法
+                            <a href="/categories/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
+                                全球通史读书笔记
                             </a>
                         
                     </div>
@@ -456,7 +457,7 @@ class subClass extends parentClass{...}
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-03
+                    2020-03-06
                 </div>
                 
 
@@ -473,97 +474,58 @@ class subClass extends parentClass{...}
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="5-1-类，父类与子类"><a href="#5-1-类，父类与子类" class="headerlink" title="5.1 类，父类与子类"></a>5.1 类，父类与子类</h2><h3 id="5-1-1-子类定义与方法覆盖"><a href="#5-1-1-子类定义与方法覆盖" class="headerlink" title="5.1.1 子类定义与方法覆盖"></a>5.1.1 子类定义与方法覆盖</h3><p>1.子类可以继承父类成员变量与方法，通过<strong>extends</strong> 关键字。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">subClass</span> <span class="token keyword">extends</span> <span class="token class-name">parentClass</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre>
-<p>2.子类可以通过定义相同签名的方法来覆盖父类方法(无需关键字)。<br>3.子类不可访问父类私有方法及成员变量，可通过<strong>super.XXX</strong>来访问父类非私有成员变量与方法。<br>4.父类被覆盖的方法也可用<strong>super.XXX</strong>在子类中调用。<br>5.子类中可以增加成员变量，方法和覆盖方法，但不可以删除父类的任何变量与方法。<br>6.子类覆盖父类方法时，可见性不能低于父类方法。如父类是<strong>public</strong>，子类必须为<strong>public</strong>。<br>7.每个类只可有一个父类，但一个类可以用无限多个子类。</p>
-<h3 id="5-1-2-子类构造器"><a href="#5-1-2-子类构造器" class="headerlink" title="5.1.2 子类构造器"></a>5.1.2 子类构造器</h3><p>子类构造器的第一条语句必须使用<strong>super(….)</strong>调用父类构造器。<br>例:</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token function">Manager</span><span class="token punctuation">(</span>String Name<span class="token punctuation">,</span><span class="token keyword">double</span> Salary<span class="token punctuation">,</span><span class="token keyword">int</span> year<span class="token punctuation">,</span><span class="token keyword">int</span> month<span class="token punctuation">,</span><span class="token keyword">int</span> day<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>salary<span class="token punctuation">,</span>year<span class="token punctuation">,</span>month<span class="token punctuation">,</span>day<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    bounus <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>如果子类构造器没有调用父类的构造器，则将自动调用父类的无参构造器。若父类无无参构造器，则会报错。</p>
-<h3 id="5-1-3-多态"><a href="#5-1-3-多态" class="headerlink" title="5.1.3 多态"></a>5.1.3 多态</h3><p>多态：一个对象，两种形态（或多种形态）。<br>对象的多态：每一个子类对象首先也是一个父类对象（is-a规则）。<br>因为子类是从父类派生而来，它保留了父类的所有特征，并加以丰富和修改。如每一个dog也是一个animal，它首先是一个动物，然后才是狗。<br>可以将一个子类对象赋给父类变量，但<code>该变量不可以使用子类中特有的方法，只能调用父类原有的方法，如果子类覆盖了父类的方法，那么该变量会调用子类覆盖后的方法</code>。<br>例：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Employee</span><span class="token punctuation">{</span>
-    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> <span class="token keyword">double</span> salary<span class="token punctuation">;</span>
-    <span class="token keyword">protected</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
-    <span class="token keyword">private</span> LocalDate hireDay<span class="token punctuation">;</span>
-
-    <span class="token keyword">public</span> <span class="token function">Employee</span><span class="token punctuation">(</span>String n<span class="token punctuation">,</span><span class="token keyword">double</span> s<span class="token punctuation">,</span><span class="token keyword">int</span> year<span class="token punctuation">,</span><span class="token keyword">int</span> month<span class="token punctuation">,</span><span class="token keyword">int</span> day<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//父类构造器</span>
-        name <span class="token operator">=</span> n<span class="token punctuation">;</span>
-        salary <span class="token operator">=</span> s<span class="token punctuation">;</span>
-        hireDay <span class="token operator">=</span> LocalDate<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>year<span class="token punctuation">,</span>month<span class="token punctuation">,</span>day<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>salary<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> LocalDate <span class="token function">getHireDay</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>hireDay<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">raiseSalary</span><span class="token punctuation">(</span><span class="token keyword">double</span> byPercent<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//按比例加薪</span>
-        <span class="token keyword">double</span> raise <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>salary<span class="token operator">*</span>byPercent<span class="token operator">/</span><span class="token number">100</span><span class="token punctuation">;</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>salary <span class="token operator">+=</span> raise<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">class</span> <span class="token class-name">Manager</span> <span class="token keyword">extends</span> <span class="token class-name">Employee</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">double</span> bonus<span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token function">Manager</span><span class="token punctuation">(</span>String n<span class="token punctuation">,</span> <span class="token keyword">double</span> s<span class="token punctuation">,</span> <span class="token keyword">int</span> year<span class="token punctuation">,</span> <span class="token keyword">int</span> month<span class="token punctuation">,</span> <span class="token keyword">int</span> day<span class="token punctuation">,</span><span class="token keyword">int</span> bonus<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">super</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> s<span class="token punctuation">,</span> year<span class="token punctuation">,</span> month<span class="token punctuation">,</span> day<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用父类构造器</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>bonus <span class="token operator">=</span> bonus<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//覆盖父类方法</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>bonus<span class="token operator">+</span><span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//调用父类方法</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getBonus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token comment" spellcheck="true">//子类特有方法</span>
-       <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>bonus<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setBonus</span><span class="token punctuation">(</span><span class="token keyword">double</span> b<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>bonus <span class="token operator">=</span> b<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-java"><code class="language-java">Employee e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Manager</span><span class="token punctuation">(</span>“Bob”<span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">2002</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将子类对象赋给父类变量</span>
-e<span class="token punctuation">.</span><span class="token function">getBounus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//error，父类变量无法调用子类特有方法。</span>
-<span class="token keyword">double</span> s <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//e = 1500.调用子类覆盖了的getSalary方法</span></code></pre>
-<h3 id="5-1-4-方法调用"><a href="#5-1-4-方法调用" class="headerlink" title="5.1.4 方法调用"></a>5.1.4 方法调用</h3><p>java编译器确定调用的是哪个方法的步骤：<br>（1）先将类中同名的，声明类型符合的方法罗列出来。<br>（2）查看这些方法中有没有参数类型匹配上的。</p>
-<p>注意：子类覆盖父类方法时，可改变其返回值。因为返回值不属于方法签名。但是不可以改变父类方法的参数，因为参数属于方法签名，如果改变了参数，就相当于定义了一个子类特有的新方法，不再是覆盖了。</p>
-<p>动态绑定：只有运行时才知道是哪类对象调用了方法。<br>例：</p>
-<pre class=" language-java"><code class="language-java">Employee e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Manager</span><span class="token punctuation">(</span>“Bob”<span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">,</span><span class="token number">2002</span><span class="token punctuation">,</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将子类对象赋给父类变量</span>
-e<span class="token punctuation">.</span><span class="token function">getSalary</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//动态绑定，只有运行时才知道e调用的是子类的覆盖方法</span></code></pre>
-<p>静态绑定：调用private、static、final方法或者类构造器，这类方法能在编译时就确定是哪类对象调用的。</p>
-<h3 id="5-1-5-阻止继承：final类和方法"><a href="#5-1-5-阻止继承：final类和方法" class="headerlink" title="5.1.5 阻止继承：final类和方法"></a>5.1.5 阻止继承：final类和方法</h3><p>不可以被继承的类为final类。<br>例：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">final</span> <span class="token keyword">class</span> <span class="token class-name">XXX</span><span class="token punctuation">{</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">}</span></code></pre>
-<p>非final类中的特定方法也可被声明为 final，这样子类就不能覆盖该方法(final类中所有方法自动成为final方法)。<br>成员变量也可以为final，被赋值后不可修改（成员变量的final和方法的final意义截然不同）。<br>将类声明为final，只有其中的方法自动变为final，而不包括成员变量。</p>
-<h3 id="5-1-6-强制类型转换"><a href="#5-1-6-强制类型转换" class="headerlink" title="5.1.6 强制类型转换"></a>5.1.6 强制类型转换</h3><p>将某个类的对象转换成另一个类的引用。<br>进行类型转换的唯一原因：在暂时忽略对象的实际类型之后，使用对象的全部功能。<br>比如将子类对象赋值给父类变量时，该变量无法调用子类的特有方法，所以要将其强制转换为子类变量。<br>只有父类变量转换为子类变量时，才需要强制类型转换，将转换类型用括号括起来。</p>
-<p>在进行类型转换之前，需要用<strong>instanof</strong>判断能否成功转换。<br>如：</p>
-<pre class=" language-java"><code class="language-java">Employee e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">if</span><span class="token punctuation">(</span>e <span class="token keyword">instanceof</span> <span class="token class-name">Manager</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    Manaer boss <span class="token operator">=</span> <span class="token punctuation">(</span>Manager e<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//这种情况是不能成功转换的，如果不用instanceof检测会抛出异常</span>
-<span class="token punctuation">}</span></code></pre>
-<p>综上：<br>1.只能在继承层次进行类型转换（从父转子需强制转换）<br>2.将父类转换为子类之前，应该用instanceof进行检查。<br>3.<code>尽量少使用强制转换和instanceof</code>。</p>
-<h3 id="5-1-7-抽象类"><a href="#5-1-7-抽象类" class="headerlink" title="5.1.7 抽象类"></a>5.1.7 抽象类</h3><p>当一个方法不需要在当前类中实现，只需要在子类中实现时，可用abstract关键字。<br>如定义一个Person类，该类用来描述一个人的基本信息。现在要在该类中加入一个getDescription方法用来输出对一个人的一段描述。<br>那么在Person类中，该方法不容易实现，因为只是对一个人的描述不可能做到非常具体，但是在其子类Student和Emoloyee中，该方法很好具体实现。</p>
-<p>抽象类：包含一个或多个抽象方法的类必须被声明为抽象的<strong>abstract</strong>。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Person</span>
-<span class="token punctuation">{</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token keyword">public</span> abstact String <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token punctuation">}</span></code></pre>
-<p>除抽象方法外，抽象类还可包含具体数据和具体方法。<br>如果子类不定义父类抽象方法或只定义了部分抽象方法，那必须将子类也标记为抽象类。<br>如果子类定义了全部抽象方法，那子类也就不是抽象类了。除非又定义了新的抽象方法。<br>类即使不含抽象方法，也可以将类声明为抽象类。<br>抽象类不可被实例化。<br>可定义一个抽象类<code>对象变量</code>，它只能引用非抽象的子类的对象。但是和之前在多态中说过的一样，不能调用子类的特有方法。</p>
-<h3 id="5-1-8-控制可见性的4个访问修饰符"><a href="#5-1-8-控制可见性的4个访问修饰符" class="headerlink" title="5.1.8 控制可见性的4个访问修饰符"></a>5.1.8 控制可见性的4个访问修饰符</h3><p>（1）仅对本类可见—–private.<br>（2）对所有类可见—–public.<br>（3）对本包和所有子类可见—–protected.<br>（4）对本包可见——–默认，无需修饰符.</p>
-
+                <h2 id="最初的欧亚大陆文明-（BC-3500——BC-1000）"><a href="#最初的欧亚大陆文明-（BC-3500——BC-1000）" class="headerlink" title="最初的欧亚大陆文明 （BC 3500——BC 1000）"></a>最初的欧亚大陆文明 （BC 3500——BC 1000）</h2><h3 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h3><p>最早的文明中心：苏美尔（美索不达米亚）伊拉克南部，南临波斯湾。</p>
+<p>文明与新石器时代部落文化区别：城市中心，制度确立的政治权利，纳贡或税收，文字，阶级等。</p>
+<p>技术革新：</p>
+<p>灌溉术，冶金术（BC 3000 印度，中东发明合金），犁的发明。</p>
+<p>牛拉犁：人类首次利用自身体力之外的力。</p>
+<p>BC3000 帆，人类首次利用风能。</p>
+<p>车轮，BC 3000年前，美索不达米亚。</p>
+<p>阶级分化起源：随着村庄转化为城市，圣祠发展为寺院，寺院中的祭司称为了第一批不用生产生产资料的人，掌握着大部分财富，祭司主管宗教活动和大量经济活动。人口增长导致大规模战争爆发，祭司的权利转到世俗新贵。通过选举产生的战时领导人由于战争频繁导致任期增长，逐渐成为永久的军事首领，后演变为国王。</p>
+<p>美索不达米亚出现文明：（BC 3500）</p>
+<p>埃及文明：（BC 3000）</p>
+<p>印度河流域文明：（BC 2500）</p>
+<p>中国黄河流域文明： （BC 3000）</p>
+<p>中美洲和秘鲁文明： （BC 500）</p>
+<p>古代文明共性：社会关系不平等，性别关系不平等。</p>
+<p>社会关系：所有文明建立在纳贡而非血亲，阶级分化。</p>
+<p>性别关系：男尊女卑，犁，灌溉，冶金术发展，女性难以参与农业和战争。</p>
+<h3 id="欧亚大陆古典文明"><a href="#欧亚大陆古典文明" class="headerlink" title="欧亚大陆古典文明"></a>欧亚大陆古典文明</h3><h4 id="美索不达米亚文明"><a href="#美索不达米亚文明" class="headerlink" title="美索不达米亚文明"></a>美索不达米亚文明</h4><p>发明世界最早的文字：楔形文字——因为要记录佃农收成，经营地产而产生。</p>
+<p>女性难以参与农业和战争活动→被迫从事家务，照顾孩子→从属于男人→男人控制女性性行为→禁足，压迫，割礼。</p>
+<p>汉谟拉比法典：男子可典当妻子和儿女，轻易离婚。女性极难离婚，若想离婚可能要付出生命代价。（被众人审判是否有不忠不贞的行为，若有则被沉湖）。</p>
+<h4 id="埃及文明"><a href="#埃及文明" class="headerlink" title="埃及文明"></a>埃及文明</h4><p>尼罗河流域三面沙漠，北面三角洲地区没有港湾，不易入侵。</p>
+<p>3100 BC 统一 至 525 BC 波斯人征服。</p>
+<p>特点：</p>
+<p>关心死亡，来世→金字塔（胡夫金字塔规模最大）。</p>
+<p>法老为神王，埃及无任何法律，法老说的话就是法律。</p>
+<p>国家对经济绝对控制，控制生产与分配。</p>
+<p>手工艺技术高度发达。</p>
+<h4 id="克里特米诺斯文明"><a href="#克里特米诺斯文明" class="headerlink" title="克里特米诺斯文明"></a>克里特米诺斯文明</h4><p>克里特岛位于地中海中心，雅典南部。</p>
+<p>海上贸易发达，奉行平等主义。</p>
+<p>王宫异常复杂，出色的给排水系统。</p>
+<p>无大规模军事和国家机构，男女权利平等。男人未垄断权利，女人可以参与农业和军事。</p>
+<h4 id="印度河流域文明"><a href="#印度河流域文明" class="headerlink" title="印度河流域文明"></a>印度河流域文明</h4><p>印度河：位于巴基斯坦境内，贯穿巴基斯坦。</p>
+<p>浓厚宗教色彩与高度计划性，城市高度规划，标准化。</p>
+<p>衰落起因未知，普遍认为公元前1500年雅利安人入侵。</p>
+<p>文字未解读，从左往右，从右往左读。</p>
+<h4 id="商朝"><a href="#商朝" class="headerlink" title="商朝"></a>商朝</h4><p>公元前1500年建立。（约BC1600年~约BC1046年）</p>
+<p>甲骨文沿用至今。</p>
+<p>两性不平等。</p>
+<p><strong>文明的代价之一就是将人分为了统治者和被统治者</strong>，原始部落中的人不知道阶级为何物，以及为什么人会有贵贱之分。</p>
+<h3 id="古典文明的毁灭"><a href="#古典文明的毁灭" class="headerlink" title="古典文明的毁灭"></a>古典文明的毁灭</h3><p>古典文明多在公元前2000年左右被游牧民族毁灭，原因：</p>
+<p>内因：铜与青铜稀少，农民没有金属工具，生产率低下，只有小部分人可以武装。</p>
+<p>外因：游牧民族入侵。</p>
+<p>促使欧亚大陆分崩离析的：</p>
+<p>1.来自南部沙漠地带的闪米特部落民。</p>
+<p>2.欧亚大草原西部的印欧人。</p>
+<p>3.大草原东部的蒙古——突厥各族。</p>
+<p>欧亚大草原：欧亚大陆中部，从西到东。横跨欧亚大陆。俄罗斯南部，内蒙古草原等同纬度地区。</p>
+<p>印欧人发源于里海，北上至俄罗斯南部。</p>
+<p>BC2000年分布于从多瑙河平原（欧洲西部，德国境内）到奥克苏斯河（阿姆河，土库曼斯坦，乌兹别克斯坦境内，伊朗北部，里海东侧，从咸海流出）。</p>
+<p>BC 2000年末 马勒，马鞍，马蹬发明。</p>
+<p>BC 2000 中叶，小亚细亚（地中海东侧，土耳其境内）东北部发明冶铁技术。</p>
+<p>BC 1200 年，赫梯帝国灭亡后，冶铁技术四散各地。（于春秋末期 BC500年左右传入中国）</p>
+<h4 id="中东"><a href="#中东" class="headerlink" title="中东"></a>中东</h4>
             </div>
             <hr/>
 
@@ -588,7 +550,7 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ioveding.github.io/2020/03/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%EF%BC%9A%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/">http://Ioveding.github.io/2020/03/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%EF%BC%9A%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/</a>
+                    <a href="http://Ioveding.github.io/2020/03/06/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E2%80%94%E2%80%94%E6%9C%80%E5%88%9D%E7%9A%84%E6%AC%A7%E4%BA%9A%E5%A4%A7%E9%99%86%E6%96%87%E6%98%8E/">http://Ioveding.github.io/2020/03/06/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E2%80%94%E2%80%94%E6%9C%80%E5%88%9D%E7%9A%84%E6%AC%A7%E4%BA%9A%E5%A4%A7%E9%99%86%E6%96%87%E6%98%8E/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -626,12 +588,12 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">Java基础</span>
+                                <a href="/tags/%E5%8E%86%E5%8F%B2/">
+                                    <span class="chip bg-color">历史</span>
                                 </a>
                             
-                                <a href="/tags/Java%E8%AF%AD%E6%B3%95/">
-                                    <span class="chip bg-color">Java语法</span>
+                                <a href="/tags/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2/">
+                                    <span class="chip bg-color">全球通史</span>
                                 </a>
                             
                         </div>
@@ -802,7 +764,7 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
         repo: 'Iovecoding.github.io',
         owner: 'Iovecoding',
         admin: ["Extreme Ways","Iovecoding"],
-        id: '2020-03-03T22-42-15',
+        id: '2020-03-06T03-17-24',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -827,34 +789,37 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/06/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E2%80%94%E2%80%94%E6%9C%80%E5%88%9D%E7%9A%84%E6%AC%A7%E4%BA%9A%E5%A4%A7%E9%99%86%E6%96%87%E6%98%8E/">
+                <a href="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="“最初的欧亚大陆文明">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="极化雷达成像基础知识">
                         
-                        <span class="card-title">“最初的欧亚大陆文明</span>
+                        <span class="card-title">极化雷达成像基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最初的欧亚大陆文明 （BC 3500——BC 1000）综述最早的文明中心：苏美尔（美索不达米亚）伊拉克南部，南临波斯湾。
-文明与新石器时代部落文化区别：城市中心，制度确立的政治权利，纳贡或税收，文字，阶级等。
-技术革新：
-灌溉术，冶金术（
+                            电磁波的极化状态电磁波除了幅度 ，相位，频率特征之外，还有极化这一基本特征。（极化就是偏振，就是光只沿某一个方向震动）
+电磁波的极化：根据电磁波在垂直与传播方向平面上的投影轨迹，把电磁波分为三类。
+1.线极化电磁波
+
+2.圆极化电磁波
+
+3
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    全球通史读书笔记
+                            <a href="/categories/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F/" class="post-category">
+                                    极化雷达成像
                                 </a>
                             
                             
@@ -864,12 +829,12 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8E%86%E5%8F%B2/">
-                        <span class="chip bg-color">历史</span>
+                    <a href="/tags/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE/">
+                        <span class="chip bg-color">极化雷达</span>
                     </a>
                     
-                    <a href="/tags/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2/">
-                        <span class="chip bg-color">全球通史</span>
+                    <a href="/tags/SAR/">
+                        <span class="chip bg-color">SAR</span>
                     </a>
                     
                 </div>
@@ -883,23 +848,21 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/03/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E2%80%94%E2%80%94%E5%8F%B2%E5%89%8D%E4%BA%BA%E7%B1%BB/">
+                <a href="/2020/03/03/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%89%EF%BC%9A%E7%BB%A7%E6%89%BF%E5%92%8C%E5%A4%9A%E6%80%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="全球通史——史前人类">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Java学习笔记三：继承和多态">
                         
-                        <span class="card-title">全球通史——史前人类</span>
+                        <span class="card-title">Java学习笔记三：继承和多态</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            史前人类人类——食物采集者地球形成于50亿年之前，40亿年前出现最早的生命：原生单细胞生物。
-进化的过程：微生物——原始生物（海藻）——无脊椎动物（水母）——脊椎动物。
-3亿年前，进入陆地。
-人类：
-最早猿人：南方古猿——400多万年前，非
+                            5.1 类，父类与子类5.1.1 子类定义与方法覆盖1.子类可以继承父类成员变量与方法，通过extends 关键字。
+class subClass extends parentClass{...}
+2.子类可以通过定义相同签名的方法来覆盖父
                         
                     </div>
                     <div class="publish-info">
@@ -910,8 +873,8 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    全球通史读书笔记
+                            <a href="/categories/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="post-category">
+                                    Java基本语法
                                 </a>
                             
                             
@@ -921,12 +884,12 @@ e<span class="token punctuation">.</span><span class="token function">getSalary<
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8E%86%E5%8F%B2/">
-                        <span class="chip bg-color">历史</span>
+                    <a href="/tags/Java%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">Java基础</span>
                     </a>
                     
-                    <a href="/tags/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2/">
-                        <span class="chip bg-color">全球通史</span>
+                    <a href="/tags/Java%E8%AF%AD%E6%B3%95/">
+                        <span class="chip bg-color">Java语法</span>
                     </a>
                     
                 </div>
