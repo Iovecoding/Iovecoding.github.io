@@ -4,14 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="极化雷达成像基础知识, 无尽之路">
-    <meta name="description" content="电磁波的极化状态电磁波除了幅度 ，相位，频率特征之外，还有极化这一基本特征。（极化就是偏振，就是光只沿某一个方向震动）
-电磁波的极化：根据电磁波在垂直与传播方向平面上的投影轨迹，把电磁波分为三类。
-1.线极化电磁波
-
-2.圆极化电磁波
-
-3">
+    <meta name="keywords" content="对最大后验概率的理解, 无尽之路">
+    <meta name="description" content="当一件事情发生时，若某个参数是未知的，我们如何从事件的结果中推测出这个未知的参数呢？例如，以抛一次硬币为一次实验，重复抛十次，实验结果为：反反反正反反反正反反。实验结果：X={x1=T，x2=T，……，x10=T}（其中T表示反面朝上，H表">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>极化雷达成像基础知识 | 无尽之路</title>
+    <title>对最大后验概率的理解 | 无尽之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">极化雷达成像基础知识</h1>
+                    <h1 class="description center-align post-title">对最大后验概率的理解</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +425,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE/">
-                                <span class="chip bg-color">极化雷达</span>
+                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">机器学习</span>
                             </a>
                         
-                            <a href="/tags/SAR/">
-                                <span class="chip bg-color">SAR</span>
+                            <a href="/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
+                                <span class="chip bg-color">数理统计</span>
                             </a>
                         
                     </div>
@@ -447,8 +441,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F/" class="post-category">
-                                极化雷达成像
+                            <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                机器学习
                             </a>
                         
                     </div>
@@ -460,7 +454,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-07
+                    2020-03-11
                 </div>
                 
 
@@ -477,24 +471,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="电磁波的极化状态"><a href="#电磁波的极化状态" class="headerlink" title="电磁波的极化状态"></a>电磁波的极化状态</h3><p>电磁波除了幅度 ，相位，频率特征之外，还有极化这一基本特征。（极化就是偏振，就是光只沿某一个方向震动）</p>
-<p>电磁波的极化：根据电磁波在垂直与传播方向平面上的投影轨迹，把电磁波分为三类。</p>
-<p>1.线极化电磁波</p>
-<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/xianjihua.png" alt="线极化"></p>
-<p>2.圆极化电磁波</p>
-<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/yuanjihua.png" alt="圆极化"></p>
-<p>3.椭圆极化电磁波</p>
-<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/tuoyuanjihua.png" alt="椭圆极化"></p>
-<h3 id="立体角"><a href="#立体角" class="headerlink" title="立体角"></a>立体角</h3><p>以观测点为球心，构造一个单位球面；任意物体投射到该球面上的<code>投影面积</code>，即为该物体相对于该观测点的立体角。</p>
-<p>因此，立体角是单位球面上的一块面积，这和“平面角是单位圆上的一段弧长”类似。</p>
-<p>单位立体角：</p>
-<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/litijiao.jpg" alt="单位立体角"></p>
-<p>单位立体角进行球面积分就是立体角。</p>
-<h3 id="雷达散射截面（回波散射截面）"><a href="#雷达散射截面（回波散射截面）" class="headerlink" title="雷达散射截面（回波散射截面）"></a>雷达散射截面（回波散射截面）</h3><p>表征了目标在雷达波照射下所产生的回波强度的一种物理量。</p>
-<p>定义：目标在雷达接收天线方向上<code>单位立体角</code>上反射的功率与入射到目标处的功率密度之比。（雷达散射截面单位是平方米）</p>
-<p><img src="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/dingyi.png" alt="定义"></p>
-<p>这个r表示的就是雷达和目标的距离，Es表示在雷达接收方向上的反射功率，E1表示发射功率。</p>
-<p>这个截面的大小就反映了目标对雷达波的反射和吸收能力，隐形飞机的隐形性能靠它来评价。当然也可以用这个特性来辨别地物是什么类型。</p>
+                <p><strong>当一件事情发生时，若某个参数是未知的，我们如何从事件的结果中推测出这个未知的参数呢？</strong><br>例如，以抛一次硬币为一次实验，重复抛十次，实验结果为：反反反正反反反正反反。<br>实验结果：X={x1=T，x2=T，……，x10=T}（其中T表示反面朝上，H表示正面朝上）<br>如何通过实验结果来估计抛一次硬币，正面朝上的概率θ？</p>
+<h3 id="极大似然估计法"><a href="#极大似然估计法" class="headerlink" title="极大似然估计法"></a>极大似然估计法</h3><p><img src="https://img-blog.csdnimg.cn/20200311154940855.png" alt><br>P(X|θ)可看做为一个自变量为θ的函数，求P(X|θ)对于θ的最大值点作为θ的极大似然估计。<br>因为每次试验都是独立进行的，所以互不相关，概率P(xi|θ)可以直接相乘，等于总概率P(X|θ)。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200311155623916.png" alt>)对P(X|θ)取对数使其变为累加<br><img src="https://img-blog.csdnimg.cn/20200311160225388.png" alt>通过导函数等于0求出θ=0.2，为θ的极大似然估计值。</p>
+<h3 id="最大后验概率"><a href="#最大后验概率" class="headerlink" title="最大后验概率"></a>最大后验概率</h3><p>极大似然估计并没有事先考虑θ的分布情况，但根据我们的经验，硬币基本都是均匀的，所以θ取0.5的概率非常大。<br>这就是θ的先验概率，我们估计θ的值的时候还要把θ的分布考虑进去。<br><img src="https://img-blog.csdnimg.cn/20200311162703564.png" alt><br>第二个式子是第一个式子用贝叶斯公式展开得到的，P(X)是样本中正面朝上的频率=0.2，是一个定值，与求最大值点的结果无关故舍去。<br>第三个式子为最终所得式，可以看到最大后验概率只比极大似然估计多乘了一个θ的分布函数。</p>
+<p>我们可以把θ的分布看为一个beta分布，则P(θ)可变为:<br><img src="https://img-blog.csdnimg.cn/20200311161749943.png" alt><br>θ是一个连续型随机变量，则P(X|θ)可变为：<br><img src="https://img-blog.csdnimg.cn/20200311163606451.png" alt><br>则对<br><img src="https://img-blog.csdnimg.cn/20200311164837210.png" alt><br>取对数：<br><img src="https://img-blog.csdnimg.cn/20200311164532765.png" alt><br>这里可以看出，θ的概率密度函数作为一个附加项也参与了最大值点的求解中，这里和机器学习中的正则化项非常相似。也就是增加了一个约束条件。</p>
+<p>两边求偏导，并让其等于0：<br><img src="https://img-blog.csdnimg.cn/20200311165024488.png" alt>解方程求得 θ 的最大后验概率为：<br><img src="https://img-blog.csdnimg.cn/20200311165208924.png" alt><br>nu为正面朝上次数2。可见最大后验概率中包含了θ密度函数的两个参数，与θ的分布有关。</p>
 
             </div>
             <hr/>
@@ -520,7 +502,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ioveding.github.io/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">http://Ioveding.github.io/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</a>
+                    <a href="http://Ioveding.github.io/2020/03/11/%E5%AF%B9%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87%E7%9A%84%E7%90%86%E8%A7%A3/">http://Ioveding.github.io/2020/03/11/%E5%AF%B9%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87%E7%9A%84%E7%90%86%E8%A7%A3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -558,12 +540,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE/">
-                                    <span class="chip bg-color">极化雷达</span>
+                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">机器学习</span>
                                 </a>
                             
-                                <a href="/tags/SAR/">
-                                    <span class="chip bg-color">SAR</span>
+                                <a href="/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
+                                    <span class="chip bg-color">数理统计</span>
                                 </a>
                             
                         </div>
@@ -734,7 +716,7 @@
         repo: 'Iovecoding.github.io',
         owner: 'Iovecoding',
         admin: ["Extreme Ways","Iovecoding"],
-        id: '2020-03-07T00-56-55',
+        id: '2020-03-11T16-56-08',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -755,9 +737,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/11/%E5%AF%B9%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87%E7%9A%84%E7%90%86%E8%A7%A3/">
                     <div class="card-image">
@@ -775,9 +758,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -790,6 +773,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -812,34 +796,37 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/06/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E2%80%94%E2%80%94%E6%9C%80%E5%88%9D%E7%9A%84%E6%AC%A7%E4%BA%9A%E5%A4%A7%E9%99%86%E6%96%87%E6%98%8E/">
+                <a href="/2020/03/07/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="“最初的欧亚大陆文明">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="极化雷达成像基础知识">
                         
-                        <span class="card-title">“最初的欧亚大陆文明</span>
+                        <span class="card-title">极化雷达成像基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最初的欧亚大陆文明 （BC 3500——BC 1000）综述最早的文明中心：苏美尔（美索不达米亚）伊拉克南部，南临波斯湾。
-文明与新石器时代部落文化区别：城市中心，制度确立的政治权利，纳贡或税收，文字，阶级等。
-技术革新：
-灌溉术，冶金术（
+                            电磁波的极化状态电磁波除了幅度 ，相位，频率特征之外，还有极化这一基本特征。（极化就是偏振，就是光只沿某一个方向震动）
+电磁波的极化：根据电磁波在垂直与传播方向平面上的投影轨迹，把电磁波分为三类。
+1.线极化电磁波
+
+2.圆极化电磁波
+
+3
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    全球通史读书笔记
+                            <a href="/categories/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE%E6%88%90%E5%83%8F/" class="post-category">
+                                    极化雷达成像
                                 </a>
                             
                             
@@ -849,12 +836,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8E%86%E5%8F%B2/">
-                        <span class="chip bg-color">历史</span>
+                    <a href="/tags/%E6%9E%81%E5%8C%96%E9%9B%B7%E8%BE%BE/">
+                        <span class="chip bg-color">极化雷达</span>
                     </a>
                     
-                    <a href="/tags/%E5%85%A8%E7%90%83%E9%80%9A%E5%8F%B2/">
-                        <span class="chip bg-color">全球通史</span>
+                    <a href="/tags/SAR/">
+                        <span class="chip bg-color">SAR</span>
                     </a>
                     
                 </div>
