@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="K-means聚类算法, 无尽之路">
-    <meta name="description" content="K-Means转载
-聚类算法有很多种（几十种），K-Means是聚类算法中的最常用的一种，算法最大的特点是简单，好理解，运算速度快，但是只能应用于连续型的数据，并且一定要在聚类前需要手工指定要分成几类。
-算法过程下面，我们描述一下K-mea">
+    <meta name="keywords" content="K-SVD详解, 无尽之路">
+    <meta name="description" content="K- SVD :为稀疏表示设计过完备字典稀疏表示我们现在有:一个样本向量y = [y1,y2,y3,…,yn].一个字典D (size:n×M)其中，D中的每一列称为D的原子。稀疏表示就是要用D的原子的线性组合来将y表示出来。换句话说，就是">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>K-means聚类算法 | 无尽之路</title>
+    <title>K-SVD详解 | 无尽之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -305,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">K-means聚类算法</h1>
+                    <h1 class="description center-align post-title">K-SVD详解</h1>
                 </div>
             </div>
         </div>
@@ -431,6 +429,14 @@
                                 <span class="chip bg-color">机器学习</span>
                             </a>
                         
+                            <a href="/tags/%E7%A8%80%E7%96%8F%E8%A1%A8%E7%A4%BA/">
+                                <span class="chip bg-color">稀疏表示</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%97%E5%85%B8%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">字典学习</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -452,7 +458,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-12
+                    2020-03-15
                 </div>
                 
 
@@ -469,20 +475,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="K-Means"><a href="#K-Means" class="headerlink" title="K-Means"></a>K-Means</h3><p><code>转载</code></p>
-<p>聚类算法有很多种（几十种），K-Means是聚类算法中的最常用的一种，算法最大的特点是简单，好理解，运算速度快，但是<strong>只能应用于连续型</strong>的数据，并且一定要在聚类前需要手工指定要分成几类。</p>
-<h4 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h4><p>下面，我们描述一下K-means算法的过程，为了尽量不用数学符号，所以描述的不是很严谨，大概就是这个意思，“物以类聚、人以群分”：</p>
-<ol>
-<li>首先输入k的值，即我们希望将数据集经过聚类得到k个分组。</li>
-<li>从数据集中随机选择k个数据点作为初始大哥（质心，Centroid）</li>
-<li>对集合中每一个小弟，计算与每一个大哥的距离（距离的含义后面会讲），离哪个大哥距离近，就跟定哪个大哥。</li>
-<li>这时每一个大哥手下都聚集了一票小弟，这时候召开人民代表大会，每一群选出新的大哥（其实是通过算法选出新的质心）。</li>
-<li>如果新大哥和老大哥之间的距离小于某一个设置的阈值（表示重新计算的质心的位置变化不大，趋于稳定，或者说收敛），可以认为我们进行的聚类已经达到期望的结果，算法终止。</li>
-<li>如果新大哥和老大哥距离变化很大，需要迭代3~5步骤。</li>
-</ol>
-<h4 id="人民代表大会"><a href="#人民代表大会" class="headerlink" title="人民代表大会"></a>人民代表大会</h4><p>对于得到的k个分组，计算每个分组内的小弟各元素平均值，作为新大哥。</p>
-<p><img src="/2020/03/12/K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%5CK-means.png" alt="K-Means聚类过程图示"></p>
-<p>“+”代表每轮的簇平局值，也就是“大哥”。</p>
+                <h2 id="K-SVD-为稀疏表示设计过完备字典"><a href="#K-SVD-为稀疏表示设计过完备字典" class="headerlink" title="K- SVD :为稀疏表示设计过完备字典"></a>K- SVD :为稀疏表示设计过完备字典</h2><h3 id="稀疏表示"><a href="#稀疏表示" class="headerlink" title="稀疏表示"></a>稀疏表示</h3><p>我们现在有:<br>一个样本向量y = [y1,y2,y3,…,yn].<br>一个字典D (size:n×M)<br>其中，D中的每一列<br><img src="https://img-blog.csdnimg.cn/20200314181633707.png" alt><br>称为D的原子。<br>稀疏表示就是要用D的原子的线性组合来将y表示出来。换句话说，就是要解y=Dx这个方程组，并且这个x向量中的0元素越多越好（0越多越稀疏）。<br>但是，因为D的列数M远大于行数n（这就是所谓的过完备），学过线性代数的人都知道，这样会导致这个方程组有无穷多解。所以我们要从这些解中找到一个最稀疏的精确解x。<br><img src="https://img-blog.csdnimg.cn/20200314183443668.png" alt><br>但是精确确定最稀疏的解被证明是np难问题（其实说白了，你要在无穷多的解中找出一个最稀疏的，你是不是要把所有解都求出来呢？这个计算量是个天文数字），所以，我们退而求其次，求出一个近似精确的解：<br><img src="https://img-blog.csdnimg.cn/20200314185537643.png" alt><br><img src="https://img-blog.csdnimg.cn/20200314185619901.png" alt> 是L0范数，是向量非0元素的个数。</p>
+<h3 id="稀疏编码：追踪算法"><a href="#稀疏编码：追踪算法" class="headerlink" title="稀疏编码：追踪算法"></a>稀疏编码：追踪算法</h3><p>稀疏编码就是根据给定的y和字典D来计算稀疏解x（x也被称作稀疏系数）的过程，追踪算法是用来求解近似稀疏解的算法。<br>因为求解确定的y=Dx解被证明是np难问题，所以通过追踪算法来求解y≈Dx的近似解。<br>用的比较多的是正交匹配追踪（OMP）和欠定系统局灶解法（FOCUSS）。</p>
+<h3 id="K-SVD-算法"><a href="#K-SVD-算法" class="headerlink" title="K-SVD 算法"></a>K-SVD 算法</h3><p>在之前所说的稀疏表示求解过程中，字典D都是事先确定好的，固定不变。如何通过一组训练数据，通过训练使字典D更加适合这些数据呢？这就是k-svd的用武之地。它通过一组给定的训练向量，在严格的稀疏性的限制下，寻找一个能使训练集中的每一个成员都实现最优的表示的字典。</p>
+<p>那么字典的更新具体是如何进行的呢？这是一个迭代的过程，分为下面两步：<br>1.在当前字典的基础上更新样本的稀疏系数。<br>2.更新字典，使其更加适应于数据。</p>
+<p>1,2步交替进行，直到字典D和稀疏系数x都不再变化，即达到收敛。<br>k-svd非常灵活，可以与任何追踪算法一起工作（步骤1）。</p>
+<h4 id="k-means-聚类算法的扩展"><a href="#k-means-聚类算法的扩展" class="headerlink" title="k-means 聚类算法的扩展"></a>k-means 聚类算法的扩展</h4><p>k-svd中的k是什么意思呢？它表示k-svd算法是k-means聚类算法的扩展。<br>如果向量y只能被字典D中的其中一个原子表示（计算y到D中每个原子的欧氏距离，选择距离最近的原子作为y的稀疏表示）那么这将是一种极端的稀疏表示，并且乘以该原子的稀疏系数x只有一个非0元素且值为1.而这就是k-means算法的内容。<br>k-svd和k-means的不同之处在于，稀疏系数x可以有多个非0元素而且可以取任意值。<br>而相似之处在于，k-means中更新聚类中心的过程对应着k-svd中更新字典原子的过程，而k-svd中的对稀疏系数的更新对应着k-means中对各个样本所属类的更新。k-means中也是不断迭代这两个过程，直到达到收敛。</p>
+<h4 id="k-svd算法内容"><a href="#k-svd算法内容" class="headerlink" title="k-svd算法内容"></a>k-svd算法内容</h4><p>k-svd分为两步：<br>1.在当前字典的基础上更新样本的稀疏系数。<br>2.更新字典，使其更加适应于数据。</p>
+<p>由于要一次处理多个样本向量，所以式子变为了这样：<br><img src="https://img-blog.csdnimg.cn/20200314193322781.png" alt><br>其中<br>Y表示有k个样本向量的矩阵，X表示每个样本向量对应的稀疏系数组成的矩阵。<br>size:  Y：n×K，D：n×M , X：M×K</p>
+<p>先说第一步：<br>第一步主要是在字典D固定的条件下，更新稀疏矩阵X。<br>因为<br><img src="https://img-blog.csdnimg.cn/20200314194429220.png" alt><br>所以，更新X的操作可分解为K次单独更新X的每一列。<br><img src="https://img-blog.csdnimg.cn/20200314194124145.png" alt><br>i=1,2,….,K.<br>这样，问题又回到了简单的只有一个y向量的情况，任何一种追踪算法都可解决。</p>
+<p>再来说说第二步，用SVD更新字典D：<br>我们将DX分解为K个秩1矩阵之和，这里每个秩1矩阵都是D中第k列乘X中第k行（k=1,2，…,M）。<br>秩1矩阵：秩为1的矩阵，可表示为一个列向量乘以一个行向量的形式。</p>
+<p>对于字典D的更新，我们依次更新字典D中的<strong>第k列</strong>dk和X中与其对应的<strong>第k行</strong><img src="https://img-blog.csdnimg.cn/20200314201833287.png" alt> ，更新时固定D中其他行和X中其他列，直到D中所有列和X中的所有行都更新完为止。<br>损失函数改变为：<br><img src="https://img-blog.csdnimg.cn/20200314201559283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt><br>更新D中第k列时，将<img src="https://img-blog.csdnimg.cn/2020031420192323.png" alt> 提出来，剩下的就是固定不变的了。与Y合并为Ek。<br>这里就有一个问题，如果用SVD直接求出：<br><img src="https://img-blog.csdnimg.cn/2020031420270258.png" alt><br>然后取U的第一列和V的第一行作为更新后的dk和xkt（x的第k行），确实可以使损失函数达到最小值，但是这样可能完全改变xkt，使其失去稀疏性，这样第一步做的工作都白费了。<br>k-svd的解决方法是，每次只有xkt中的非0元素参与更新。<br>首先，记录xkt中的非0元素的索引组成wk。<br><img src="https://img-blog.csdnimg.cn/20200314203318114.png" alt><br>如：<br><img src="https://img-blog.csdnimg.cn/20200314203529173.png" alt></p>
+<p>然后构造矩阵Ωk，size：M×|wk| ，在第（wk(i),i）处，元素为1，其余都是0。<br>|wk|的大小等于wk元素的个数。<br>如：<br><img src="https://img-blog.csdnimg.cn/20200315041824845.png" alt><br>这样，使<br><img src="https://img-blog.csdnimg.cn/20200315042059503.png" alt><br>xRk就是xTk丢弃掉0元素后仅剩非0元素的向量。</p>
+<p>同理：<br><img src="https://img-blog.csdnimg.cn/20200315042541465.png" alt><br>size：n×|wk| (xTk保留第1,4个元素，Y保留第1,4列)<br><img src="https://img-blog.csdnimg.cn/20200315042720429.png" alt><br>size：n×|wk| (也是保留和xTk非零元素对应的列)</p>
+<p>至此，式</p>
+<p><img src="https://img-blog.csdnimg.cn/20200315042852458.png" alt><br>变为：<br><img src="https://img-blog.csdnimg.cn/20200315042939995.png" alt><br>我们通过对EkR矩阵进行svd分解：<br><img src="https://img-blog.csdnimg.cn/2020031504324782.png" alt><br>取U第一列和VT第一行作为更新后的dk和xRk。<br>将字典中的M个原子都更新完成之后，字典D和稀疏系数矩阵X均更新完成。步骤2完成。</p>
+<p>重复步骤1和步骤2，当D和X不再变化时，达到收敛。停止迭代。</p>
+<p>下面是k-svd算法的完整表示：<br><img src="https://img-blog.csdnimg.cn/20200315043650233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt></p>
 
             </div>
             <hr/>
@@ -508,7 +517,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Ioveding.github.io/2020/03/12/K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/">http://Ioveding.github.io/2020/03/12/K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/</a>
+                    <a href="http://Ioveding.github.io/2020/03/15/K-SVD%E8%AF%A6%E8%A7%A3/">http://Ioveding.github.io/2020/03/15/K-SVD%E8%AF%A6%E8%A7%A3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,6 +557,14 @@
                             
                                 <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                                     <span class="chip bg-color">机器学习</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%A8%80%E7%96%8F%E8%A1%A8%E7%A4%BA/">
+                                    <span class="chip bg-color">稀疏表示</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%97%E5%85%B8%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">字典学习</span>
                                 </a>
                             
                         </div>
@@ -718,7 +735,7 @@
         repo: 'Iovecoding.github.io',
         owner: 'Iovecoding',
         admin: ["Extreme Ways","Iovecoding"],
-        id: '2020-03-12T14-34-11',
+        id: '2020-03-15T04-39-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -739,9 +756,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/03/15/K-SVD%E8%AF%A6%E8%A7%A3/">
                     <div class="card-image">
@@ -759,9 +777,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -774,6 +792,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -800,24 +819,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/11/%E5%AF%B9%E6%9C%80%E5%A4%A7%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87%E7%9A%84%E7%90%86%E8%A7%A3/">
+                <a href="/2020/03/12/K-means%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="对最大后验概率的理解">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="K-means聚类算法">
                         
-                        <span class="card-title">对最大后验概率的理解</span>
+                        <span class="card-title">K-means聚类算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            当一件事情发生时，若某个参数是未知的，我们如何从事件的结果中推测出这个未知的参数呢？例如，以抛一次硬币为一次实验，重复抛十次，实验结果为：反反反正反反反正反反。实验结果：X={x1=T，x2=T，……，x10=T}（其中T表示反面朝上，H表
+                            K-Means转载
+聚类算法有很多种（几十种），K-Means是聚类算法中的最常用的一种，算法最大的特点是简单，好理解，运算速度快，但是只能应用于连续型的数据，并且一定要在聚类前需要手工指定要分成几类。
+算法过程下面，我们描述一下K-mea
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-12
                             </span>
                         <span class="publish-author">
                             
@@ -836,10 +857,6 @@
                     
                     <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/">
-                        <span class="chip bg-color">数理统计</span>
                     </a>
                     
                 </div>
