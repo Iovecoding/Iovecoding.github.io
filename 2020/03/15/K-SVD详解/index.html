@@ -476,6 +476,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="K-SVD-为稀疏表示设计过完备字典"><a href="#K-SVD-为稀疏表示设计过完备字典" class="headerlink" title="K- SVD :为稀疏表示设计过完备字典"></a>K- SVD :为稀疏表示设计过完备字典</h2><h3 id="稀疏表示"><a href="#稀疏表示" class="headerlink" title="稀疏表示"></a>稀疏表示</h3><p>我们现在有:<br>一个样本向量y = [y1,y2,y3,…,yn].<br>一个字典D (size:n×M)<br>其中，D中的每一列<br><img src="https://img-blog.csdnimg.cn/20200314181633707.png" alt><br>称为D的原子。<br>稀疏表示就是要用D的原子的线性组合来将y表示出来。换句话说，就是要解y=Dx这个方程组，并且这个x向量中的0元素越多越好（0越多越稀疏）。<br>但是，因为D的列数M远大于行数n（这就是所谓的过完备），学过线性代数的人都知道，这样会导致这个方程组有无穷多解。所以我们要从这些解中找到一个最稀疏的精确解x。<br><img src="https://img-blog.csdnimg.cn/20200314183443668.png" alt><br>但是精确确定最稀疏的解被证明是np难问题（其实说白了，你要在无穷多的解中找出一个最稀疏的，你是不是要把所有解都求出来呢？这个计算量是个天文数字），所以，我们退而求其次，求出一个近似精确的解：<br><img src="https://img-blog.csdnimg.cn/20200314185537643.png" alt><br><img src="https://img-blog.csdnimg.cn/20200314185619901.png" alt> 是L0范数，是向量非0元素的个数。</p>
+<p>$$ x^{y^z} = (1+{\rm e}^x)^{-2xy^w} $$<br>$$sqrt()$$</p>
 <h3 id="稀疏编码：追踪算法"><a href="#稀疏编码：追踪算法" class="headerlink" title="稀疏编码：追踪算法"></a>稀疏编码：追踪算法</h3><p>稀疏编码就是根据给定的y和字典D来计算稀疏解x（x也被称作稀疏系数）的过程，追踪算法是用来求解近似稀疏解的算法。<br>因为求解确定的y=Dx解被证明是np难问题，所以通过追踪算法来求解y≈Dx的近似解。<br>用的比较多的是正交匹配追踪（OMP）和欠定系统局灶解法（FOCUSS）。</p>
 <h3 id="K-SVD-算法"><a href="#K-SVD-算法" class="headerlink" title="K-SVD 算法"></a>K-SVD 算法</h3><p>在之前所说的稀疏表示求解过程中，字典D都是事先确定好的，固定不变。如何通过一组训练数据，通过训练使字典D更加适合这些数据呢？这就是k-svd的用武之地。它通过一组给定的训练向量，在严格的稀疏性的限制下，寻找一个能使训练集中的每一个成员都实现最优的表示的字典。</p>
 <p>那么字典的更新具体是如何进行的呢？这是一个迭代的过程，分为下面两步：<br>1.在当前字典的基础上更新样本的稀疏系数。<br>2.更新字典，使其更加适应于数据。</p>
@@ -993,6 +994,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
     <footer class="page-footer bg-color">
