@@ -477,7 +477,7 @@
 <p>该文章中还具体介绍了均值模糊和边缘保留滤波EPF</p>
 <h4 id="高斯滤波（高斯模糊）"><a href="#高斯滤波（高斯模糊）" class="headerlink" title="高斯滤波（高斯模糊）"></a>高斯滤波（高斯模糊）</h4><p>通俗的讲，高斯滤波就是对整幅图像进行<a href="https://baike.baidu.com/item/加权平均" target="_blank" rel="noopener">加权平均</a>的过程，每一个像素点的值，都由其本身和邻域内的其他像素值经过加权平均后得到。</p>
 <h4 id="数学原理"><a href="#数学原理" class="headerlink" title="数学原理"></a>数学原理</h4><p>高斯分布的一维和二维原理如下：</p>
-<p><img src="/2020/04/06/cv2%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A/D:%5Cstudy%5Cblog%5Csource_posts%5Ccv2%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%5Cpriciple.png" alt></p>
+<p><img src="/2020/04/06/cv2%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A/priciple.png" alt></p>
 <p>高斯分布的标准差σ。标准差代表着数据的离散程度，如果σ较小，那么生成的模板的中心系数较大，而周围的系数较小，这样对图像的平滑效果就不是很明显；反之，σ较大，则生成的模板的各个系数相差就不是很大，比较类似均值模板，对图像的平滑效果比较明显。高斯模糊具体原理见博文：<a href="https://blog.csdn.net/u012992171/article/details/51023768" target="_blank" rel="noopener">https://blog.csdn.net/u012992171/article/details/51023768</a></p>
 <h4 id="cv2-GaussianBlur函数"><a href="#cv2-GaussianBlur函数" class="headerlink" title="cv2.GaussianBlur函数"></a>cv2.GaussianBlur函数</h4><pre class=" language-python"><code class="language-python">GaussianBlur<span class="token punctuation">(</span>src<span class="token punctuation">,</span>ksize<span class="token punctuation">,</span>sigmaX<span class="token punctuation">,</span>dst<span class="token punctuation">,</span>sigmaY<span class="token punctuation">,</span>borderType <span class="token punctuation">)</span></code></pre>
 <p>——src：输入图像；图像可以具有任意数量的通道，这些通道可以独立处理，但深度应为CV_8U，CV_16U，CV_16S，CV_32F或CV_64F。<br>——dst：输出图像，大小和类型与src相同。<br>——ksize：高斯内核大小。 ksize.width和ksize.height可以不同，但它们都必须为正数和奇数，也可以为零，然后根据sigma计算得出。<br>——sigmaX ：X方向上的高斯核标准偏差。<br>——sigmaY ：Y方向上的高斯核标准差；如果sigmaY为零，则将其设置为等于sigmaX；如果两个sigmas为零，则分别从ksize.width和ksize.height计算得出；为了完全控制结果，而不管将来可能对所有这些语义进行的修改，建议指定所有ksize，sigmaX和sigmaY。</p>
@@ -825,8 +825,9 @@ processed <span class="token operator">=</span> cv2<span class="token punctuatio
                     <div class="summary block-with-text">
                         
                             将字符串列表的元素进行类型转换str_list = ["1","2","3","4","5"]
-float_list = list(map(float,str_list))
-返回list和np.array中的最大值位置l = [1,2,3,
+#float_list = list(map(float,str_list))
+for i in range(str_list):
+    st
                         
                     </div>
                     <div class="publish-info">
