@@ -489,7 +489,7 @@
 <p>然后构造矩阵Ωk，size：M×|wk| ，在第（wk(i),i）处，元素为1，其余都是0。<br>|wk|的大小等于wk元素的个数。<br>如：<br><img src="https://img-blog.csdnimg.cn/20200315041824845.png" alt><br>这样，使<br><img src="https://img-blog.csdnimg.cn/20200315042059503.png" alt><br>xRk就是xTk丢弃掉0元素后仅剩非0元素的向量。</p>
 <p>同理：<br><img src="https://img-blog.csdnimg.cn/20200315042541465.png" alt><br>size：n×|wk| (xTk保留第1,4个元素，Y保留第1,4列)<br><img src="https://img-blog.csdnimg.cn/20200315042720429.png" alt><br>size：n×|wk| (也是保留和xTk非零元素对应的列)</p>
 <p>至此，式</p>
-<p><img src="https://img-blog.csdnimg.cn/20200315042852458.png" alt><br>变为：<br><img src="https://img-blog.csdnimg.cn/20200315042939995.png" alt><br>我们通过对EkR矩阵进行svd分解：<br><img src="https://img-blog.csdnimg.cn/2020031504324782.png" alt><br>取U第一列和VT第一行作为更新后的dk和xRk。<br>将字典中的M个原子都更新完成之后，字典D和稀疏系数矩阵X均更新完成。步骤2完成。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200315042852458.png" alt><br>变为：<br><img src="https://img-blog.csdnimg.cn/20200315042939995.png" alt><br>我们通过对EkR矩阵进行svd分解：<br><img src="https://img-blog.csdnimg.cn/2020031504324782.png" alt><br>取U第一列和[VT第一行*sigma第一个元素]作为更新后的dk和xk。<br>将字典中的M个原子都更新完成之后，字典D和稀疏系数矩阵X均更新完成。步骤2完成。</p>
 <p>重复步骤1和步骤2，当D和X不再变化时，达到收敛。停止迭代。</p>
 <p>下面是k-svd算法的完整表示：<br><img src="https://img-blog.csdnimg.cn/20200315043650233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NvdW50aW5nX3N0YXJzMTIz,size_16,color_FFFFFF,t_70" alt></p>
 
